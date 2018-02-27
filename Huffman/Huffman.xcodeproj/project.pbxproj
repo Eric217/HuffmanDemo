@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07F1760A2045005000223AEB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F176092045005000223AEB /* AppDelegate.m */; };
+		07F1760C2045005100223AEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07F1760B2045005100223AEB /* Assets.xcassets */; };
+		07F1760F2045005100223AEB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07F1760D2045005100223AEB /* MainMenu.xib */; };
+		07F176122045005100223AEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F176112045005100223AEB /* main.m */; };
+		07F1761D2045005100223AEB /* HuffmanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1761C2045005100223AEB /* HuffmanTests.m */; };
+		07F176282045005100223AEB /* HuffmanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F176272045005100223AEB /* HuffmanUITests.m */; };
+		07F17645204509D500223AEB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F17643204509D500223AEB /* MainViewController.m */; };
+		07F17646204509D500223AEB /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07F17644204509D500223AEB /* MainViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		07F176192045005100223AEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07F175FD2045005000223AEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07F176042045005000223AEB;
+			remoteInfo = Huffman;
+		};
+		07F176242045005100223AEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07F175FD2045005000223AEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07F176042045005000223AEB;
+			remoteInfo = Huffman;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07F176052045005000223AEB /* Huffman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Huffman.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07F176082045005000223AEB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		07F176092045005000223AEB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		07F1760B2045005100223AEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		07F1760E2045005100223AEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		07F176102045005100223AEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07F176112045005100223AEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		07F176132045005100223AEB /* Huffman.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Huffman.entitlements; sourceTree = "<group>"; };
+		07F176182045005100223AEB /* HuffmanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HuffmanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		07F1761C2045005100223AEB /* HuffmanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HuffmanTests.m; sourceTree = "<group>"; };
+		07F1761E2045005100223AEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07F176232045005100223AEB /* HuffmanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HuffmanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		07F176272045005100223AEB /* HuffmanUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HuffmanUITests.m; sourceTree = "<group>"; };
+		07F176292045005100223AEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07F17642204509D500223AEB /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		07F17643204509D500223AEB /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		07F17644204509D500223AEB /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07F176022045005000223AEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07F176152045005100223AEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07F176202045005100223AEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07F175FC2045005000223AEB = {
+			isa = PBXGroup;
+			children = (
+				07F176072045005000223AEB /* Huffman */,
+				07F1761B2045005100223AEB /* HuffmanTests */,
+				07F176262045005100223AEB /* HuffmanUITests */,
+				07F176062045005000223AEB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		07F176062045005000223AEB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07F176052045005000223AEB /* Huffman.app */,
+				07F176182045005100223AEB /* HuffmanTests.xctest */,
+				07F176232045005100223AEB /* HuffmanUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07F176072045005000223AEB /* Huffman */ = {
+			isa = PBXGroup;
+			children = (
+				07F176082045005000223AEB /* AppDelegate.h */,
+				07F176092045005000223AEB /* AppDelegate.m */,
+				07F1764920450FF400223AEB /* MainView */,
+				07F176352045006D00223AEB /* support */,
+			);
+			path = Huffman;
+			sourceTree = "<group>";
+		};
+		07F1761B2045005100223AEB /* HuffmanTests */ = {
+			isa = PBXGroup;
+			children = (
+				07F1761C2045005100223AEB /* HuffmanTests.m */,
+				07F1761E2045005100223AEB /* Info.plist */,
+			);
+			path = HuffmanTests;
+			sourceTree = "<group>";
+		};
+		07F176262045005100223AEB /* HuffmanUITests */ = {
+			isa = PBXGroup;
+			children = (
+				07F176272045005100223AEB /* HuffmanUITests.m */,
+				07F176292045005100223AEB /* Info.plist */,
+			);
+			path = HuffmanUITests;
+			sourceTree = "<group>";
+		};
+		07F176352045006D00223AEB /* support */ = {
+			isa = PBXGroup;
+			children = (
+				07F1760B2045005100223AEB /* Assets.xcassets */,
+				07F1760D2045005100223AEB /* MainMenu.xib */,
+				07F176102045005100223AEB /* Info.plist */,
+				07F176112045005100223AEB /* main.m */,
+				07F176132045005100223AEB /* Huffman.entitlements */,
+			);
+			name = support;
+			sourceTree = "<group>";
+		};
+		07F1764920450FF400223AEB /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				07F17642204509D500223AEB /* MainViewController.h */,
+				07F17643204509D500223AEB /* MainViewController.m */,
+				07F17644204509D500223AEB /* MainViewController.xib */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07F176042045005000223AEB /* Huffman */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07F1762C2045005100223AEB /* Build configuration list for PBXNativeTarget "Huffman" */;
+			buildPhases = (
+				07F176012045005000223AEB /* Sources */,
+				07F176022045005000223AEB /* Frameworks */,
+				07F176032045005000223AEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Huffman;
+			productName = Huffman;
+			productReference = 07F176052045005000223AEB /* Huffman.app */;
+			productType = "com.apple.product-type.application";
+		};
+		07F176172045005100223AEB /* HuffmanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07F1762F2045005100223AEB /* Build configuration list for PBXNativeTarget "HuffmanTests" */;
+			buildPhases = (
+				07F176142045005100223AEB /* Sources */,
+				07F176152045005100223AEB /* Frameworks */,
+				07F176162045005100223AEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07F1761A2045005100223AEB /* PBXTargetDependency */,
+			);
+			name = HuffmanTests;
+			productName = HuffmanTests;
+			productReference = 07F176182045005100223AEB /* HuffmanTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		07F176222045005100223AEB /* HuffmanUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07F176322045005100223AEB /* Build configuration list for PBXNativeTarget "HuffmanUITests" */;
+			buildPhases = (
+				07F1761F2045005100223AEB /* Sources */,
+				07F176202045005100223AEB /* Frameworks */,
+				07F176212045005100223AEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07F176252045005100223AEB /* PBXTargetDependency */,
+			);
+			name = HuffmanUITests;
+			productName = HuffmanUITests;
+			productReference = 07F176232045005100223AEB /* HuffmanUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07F175FD2045005000223AEB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = Eric;
+				TargetAttributes = {
+					07F176042045005000223AEB = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					07F176172045005100223AEB = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 07F176042045005000223AEB;
+					};
+					07F176222045005100223AEB = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 07F176042045005000223AEB;
+					};
+				};
+			};
+			buildConfigurationList = 07F176002045005000223AEB /* Build configuration list for PBXProject "Huffman" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 07F175FC2045005000223AEB;
+			productRefGroup = 07F176062045005000223AEB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07F176042045005000223AEB /* Huffman */,
+				07F176172045005100223AEB /* HuffmanTests */,
+				07F176222045005100223AEB /* HuffmanUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07F176032045005000223AEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07F1760C2045005100223AEB /* Assets.xcassets in Resources */,
+				07F17646204509D500223AEB /* MainViewController.xib in Resources */,
+				07F1760F2045005100223AEB /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07F176162045005100223AEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07F176212045005100223AEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07F176012045005000223AEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07F176122045005100223AEB /* main.m in Sources */,
+				07F17645204509D500223AEB /* MainViewController.m in Sources */,
+				07F1760A2045005000223AEB /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07F176142045005100223AEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07F1761D2045005100223AEB /* HuffmanTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07F1761F2045005100223AEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07F176282045005100223AEB /* HuffmanUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		07F1761A2045005100223AEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07F176042045005000223AEB /* Huffman */;
+			targetProxy = 07F176192045005100223AEB /* PBXContainerItemProxy */;
+		};
+		07F176252045005100223AEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07F176042045005000223AEB /* Huffman */;
+			targetProxy = 07F176242045005100223AEB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		07F1760D2045005100223AEB /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07F1760E2045005100223AEB /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		07F1762A2045005100223AEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		07F1762B2045005100223AEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		07F1762D2045005100223AEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Huffman/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.INGStudio.Test.Huffman;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		07F1762E2045005100223AEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Huffman/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.INGStudio.Test.Huffman;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		07F176302045005100223AEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = HuffmanTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.INGStudio.Test.HuffmanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Huffman.app/Contents/MacOS/Huffman";
+			};
+			name = Debug;
+		};
+		07F176312045005100223AEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = HuffmanTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.INGStudio.Test.HuffmanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Huffman.app/Contents/MacOS/Huffman";
+			};
+			name = Release;
+		};
+		07F176332045005100223AEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = HuffmanUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.INGStudio.Test.HuffmanUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Huffman;
+			};
+			name = Debug;
+		};
+		07F176342045005100223AEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = HuffmanUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.INGStudio.Test.HuffmanUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Huffman;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07F176002045005000223AEB /* Build configuration list for PBXProject "Huffman" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07F1762A2045005100223AEB /* Debug */,
+				07F1762B2045005100223AEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07F1762C2045005100223AEB /* Build configuration list for PBXNativeTarget "Huffman" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07F1762D2045005100223AEB /* Debug */,
+				07F1762E2045005100223AEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07F1762F2045005100223AEB /* Build configuration list for PBXNativeTarget "HuffmanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07F176302045005100223AEB /* Debug */,
+				07F176312045005100223AEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07F176322045005100223AEB /* Build configuration list for PBXNativeTarget "HuffmanUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07F176332045005100223AEB /* Debug */,
+				07F176342045005100223AEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 07F175FD2045005000223AEB /* Project object */;
+}
