@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "HuffmanTree.hpp"
 
 @interface MainViewController ()
 
@@ -31,10 +32,41 @@
     [_button setAction:@selector(selectFilePanel)];
     [_button setTarget:self];
 }
+
+- (void)dealFinalString:(NSString *)str totalNum:(NSUInteger)total {
  
-- (void)dealDataAtPath:(NSString *)path {
+    char * charSet = new char[total];
+    int * weights = new int[total];
+    int charSetSize = 0;
+    bool add;
+    for (int i = 0; i < total; i++) {
+        add = 0;
+        char c = [str characterAtIndex:i];
+        for (int j = 0; j < charSetSize; j++) {
+            if (charSet[j] == c) {
+                weights[j]++;
+                add = 1;
+                break;
+            }
+        }
+        if (!add) {
+            charSet[charSetSize] = c;
+            weights[charSetSize++] = 1;
+        }
+    }
+    BinaryTree<char> tree = HuffmanTree(charSet, weights, charSetSize);
+    //MARK: - tree generated
+    tree.allPath(1);
+    tree.allPath(0);
+    tree.Delete();
+    delete [] charSet;
+    delete [] weights;
     
-   
+}
+
+
+- (void)dealDataAtPath:(NSString *)path {
+
     NSFileManager *mana = [NSFileManager defaultManager];
     if ([mana fileExistsAtPath:path]) {
         
@@ -46,13 +78,14 @@
          
             NSString *content = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
            
-            if (!data || !content.length) {
+            NSUInteger len = content.length;
+            if (!data || !len) {
                 [self presentAlertWithMsg:@"未读取到内容或文件格式有误"];
                 return;
             }
-           
-            NSLog(@"%lu characters, content:\n %@", content.length, content);
- 
+//            NSLog(@"%lu characters, content:\n %@", len, content);
+            [self dealFinalString:content totalNum:len];
+            
         } else {
             [self presentAlertWithMsg:@"没有权限访问该文件"];
         }

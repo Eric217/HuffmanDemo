@@ -13,7 +13,7 @@
 		07F176122045005100223AEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F176112045005100223AEB /* main.m */; };
 		07F1761D2045005100223AEB /* HuffmanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1761C2045005100223AEB /* HuffmanTests.m */; };
 		07F176282045005100223AEB /* HuffmanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F176272045005100223AEB /* HuffmanUITests.m */; };
-		07F17645204509D500223AEB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F17643204509D500223AEB /* MainViewController.m */; };
+		07F17645204509D500223AEB /* MainViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07F17643204509D500223AEB /* MainViewController.mm */; };
 		07F17646204509D500223AEB /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07F17644204509D500223AEB /* MainViewController.xib */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +35,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		070722BC2048EE4300F4CBE6 /* xcept.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = xcept.hpp; sourceTree = "<group>"; };
+		070722BD2048EE4300F4CBE6 /* LinkedStack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedStack.hpp; sourceTree = "<group>"; };
+		070722BE2048EE4300F4CBE6 /* BinaryTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BinaryTree.hpp; sourceTree = "<group>"; };
+		070722BF2048EE4300F4CBE6 /* MinHeap.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MinHeap.hpp; sourceTree = "<group>"; };
+		070722C02048EE4300F4CBE6 /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
+		070722C12048EE4300F4CBE6 /* LinkedQueue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedQueue.hpp; sourceTree = "<group>"; };
+		070722C22048EE7A00F4CBE6 /* HuffmanTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HuffmanTree.hpp; sourceTree = "<group>"; };
 		07F176052045005000223AEB /* Huffman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Huffman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F176082045005000223AEB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		07F176092045005000223AEB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -50,7 +57,7 @@
 		07F176272045005100223AEB /* HuffmanUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HuffmanUITests.m; sourceTree = "<group>"; };
 		07F176292045005100223AEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07F17642204509D500223AEB /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		07F17643204509D500223AEB /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		07F17643204509D500223AEB /* MainViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainViewController.mm; sourceTree = "<group>"; };
 		07F17644204509D500223AEB /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +86,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		070722BB2048EE2500F4CBE6 /* cppSource */ = {
+			isa = PBXGroup;
+			children = (
+				070722C22048EE7A00F4CBE6 /* HuffmanTree.hpp */,
+				070722BE2048EE4300F4CBE6 /* BinaryTree.hpp */,
+				070722C12048EE4300F4CBE6 /* LinkedQueue.hpp */,
+				070722BD2048EE4300F4CBE6 /* LinkedStack.hpp */,
+				070722BF2048EE4300F4CBE6 /* MinHeap.hpp */,
+				070722C02048EE4300F4CBE6 /* Node.hpp */,
+				070722BC2048EE4300F4CBE6 /* xcept.hpp */,
+			);
+			path = cppSource;
+			sourceTree = "<group>";
+		};
 		07F175FC2045005000223AEB = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +126,7 @@
 				07F176082045005000223AEB /* AppDelegate.h */,
 				07F176092045005000223AEB /* AppDelegate.m */,
 				07F1764920450FF400223AEB /* MainView */,
+				070722BB2048EE2500F4CBE6 /* cppSource */,
 				07F176352045006D00223AEB /* support */,
 			);
 			path = Huffman;
@@ -144,7 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				07F17642204509D500223AEB /* MainViewController.h */,
-				07F17643204509D500223AEB /* MainViewController.m */,
+				07F17643204509D500223AEB /* MainViewController.mm */,
 				07F17644204509D500223AEB /* MainViewController.xib */,
 			);
 			path = MainView;
@@ -286,7 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07F176122045005100223AEB /* main.m in Sources */,
-				07F17645204509D500223AEB /* MainViewController.m in Sources */,
+				07F17645204509D500223AEB /* MainViewController.mm in Sources */,
 				07F1760A2045005000223AEB /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
