@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07D38C42204A931D00F9FABC /* NSViewController+tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D38C41204A931D00F9FABC /* NSViewController+tools.m */; };
 		07F1760A2045005000223AEB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F176092045005000223AEB /* AppDelegate.m */; };
 		07F1760C2045005100223AEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07F1760B2045005100223AEB /* Assets.xcassets */; };
 		07F1760F2045005100223AEB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07F1760D2045005100223AEB /* MainMenu.xib */; };
@@ -42,6 +43,8 @@
 		070722C02048EE4300F4CBE6 /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
 		070722C12048EE4300F4CBE6 /* LinkedQueue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedQueue.hpp; sourceTree = "<group>"; };
 		070722C22048EE7A00F4CBE6 /* HuffmanTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HuffmanTree.hpp; sourceTree = "<group>"; };
+		07D38C40204A931D00F9FABC /* NSViewController+tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSViewController+tools.h"; sourceTree = "<group>"; };
+		07D38C41204A931D00F9FABC /* NSViewController+tools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSViewController+tools.m"; sourceTree = "<group>"; };
 		07F176052045005000223AEB /* Huffman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Huffman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F176082045005000223AEB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		07F176092045005000223AEB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -167,6 +170,8 @@
 			children = (
 				07F17642204509D500223AEB /* MainViewController.h */,
 				07F17643204509D500223AEB /* MainViewController.mm */,
+				07D38C40204A931D00F9FABC /* NSViewController+tools.h */,
+				07D38C41204A931D00F9FABC /* NSViewController+tools.m */,
 				07F17644204509D500223AEB /* MainViewController.xib */,
 			);
 			path = MainView;
@@ -310,6 +315,7 @@
 				07F176122045005100223AEB /* main.m in Sources */,
 				07F17645204509D500223AEB /* MainViewController.mm in Sources */,
 				07F1760A2045005000223AEB /* AppDelegate.m in Sources */,
+				07D38C42204A931D00F9FABC /* NSViewController+tools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

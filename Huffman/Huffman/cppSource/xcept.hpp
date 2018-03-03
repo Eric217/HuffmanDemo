@@ -17,19 +17,11 @@
 #define HFMRIGHTPATH '1'
  
 NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+unsigned long Encoding = 4;
 
 using namespace std;
 
 class OutOfBounds {};
 class NoMemory {};
-
-
-//
-//void my_new_handler() {
-//    throw NoMem();
-//}
-//
-//new_handler old_handler = set_new_handler(my_new_handler);
-
 
 #endif /* xcept_hpp */

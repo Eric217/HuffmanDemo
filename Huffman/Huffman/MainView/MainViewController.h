@@ -10,5 +10,8 @@
 
 @interface MainViewController : NSViewController
 
-@property (nonatomic, strong) NSButton *button;
+@property (nonatomic, strong) NSButton *encoder;
+@property (nonatomic, strong) NSButton *decoder;
+
+ 
 @end

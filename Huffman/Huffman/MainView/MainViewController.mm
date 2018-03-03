@@ -8,42 +8,92 @@
 
 #import "MainViewController.h"
 #import "HuffmanTree.hpp"
+#import "NSViewController+tools.h"
 
-#define Encoding NSUTF8StringEncoding
-
+ 
 @interface MainViewController ()
 
 @end
 
 @implementation MainViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
+ 
     CGFloat wid = self.view.bounds.size.width;
     CGFloat hei = self.view.bounds.size.height;
 
-    _button = [[NSButton alloc] initWithFrame:NSMakeRect(wid/4, hei/4, wid/2, hei/7)];
-    _button.bezelStyle = NSRoundedBezelStyle;
-//    _button.bordered = 1;
-    [self.view addSubview:_button];
-    [_button setTitle:@"click Me"];
-    [_button setButtonType:NSMomentaryPushInButton];
-//    [_button setAutoresizesSubviews:1];
-//    [_button setImageScaling:NSImageScaleAxesIndependently];
-    [_button setAction:@selector(selectFilePanel)];
-    [_button setTarget:self];
+    _encoder = [[NSButton alloc] initWithFrame:NSMakeRect(wid/5, hei*0.6, 100, 35)];
+    _decoder = [[NSButton alloc] initWithFrame:NSMakeRect(wid*0.4+100, hei*0.6, 100, 35)];
+    _encoder.bezelStyle = NSRoundedBezelStyle;
+    _decoder.bezelStyle = NSRoundedBezelStyle;
+    
+    [self.view addSubview:_decoder];
+    [self.view addSubview:_encoder];
+
+    [_encoder setTitle:@"开始编码"];
+    [_decoder setTitle:@"解码"];
+    [_decoder setButtonType:NSMomentaryPushInButton];
+    [_encoder setButtonType:NSMomentaryPushInButton];
+ 
+    [_decoder setAction:@selector(selectFileToDecode)];
+    [_decoder setTarget:self];
+    [_encoder setAction:@selector(selectFileToEncode)];
+    [_encoder setTarget:self];
 }
 
+- (void)selectFileToDecode {
+    
+    __weak typeof(self)weakSelf = self;
+    
+    [self selectPathIsDirAllowed:0 multiSelect:0 successHandler:^(NSArray * urls) {
+        //MARK: - 获取原字符串
+        NSString *path = [urls.firstObject path];
+        NSString *codedString = [[NSString alloc] initWithContentsOfFile:path encoding:NSASCIIStringEncoding error:nil];
+        unsigned long len = codedString.length;
+        NSMutableDictionary *reversedDict = [[NSMutableDictionary alloc] initWithCapacity:dict.count];
+        [dict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+            [reversedDict setObject:key forKey:obj];
+        }];
+        NSMutableString *decodeString = [[NSMutableString alloc] init];
+        NSMutableString *temp = [[NSMutableString alloc] init];
+        NSString *re;
+        for (int i = 0; i < len; i++) {
+            unichar c = [codedString characterAtIndex:i];
+            [temp appendString:[NSString stringWithFormat:@"%c", c]];
+            re = [reversedDict objectForKey:temp];
+            if (re) {
+                temp = [[NSMutableString alloc] init];
+                [decodeString appendString:re];
+            }
+        }
+        //MARK: - 保存到本地
+        NSSavePanel *savePanel = [NSSavePanel savePanel];
+        [savePanel beginSheetModalForWindow:weakSelf.view.window completionHandler:^(NSInteger saveClicked) {
+            if (saveClicked == 1) {
+                NSString *selectedPath = savePanel.URL.path;
+                bool created = [NSFileManager.defaultManager createFileAtPath:selectedPath contents:[decodeString dataUsingEncoding:4] attributes:nil];
+               
+                if (!created) {
+                    [self presentAlertWithMsg:@"创建文件时失败，请重试"];
+                    return;
+                }
+            }
+        }];
+    }];
 
-/// str: 文件内容字符串 totalNum: 字数
+}
+
+///已得到文件的内容字符串：str 总字符数：totalNum
 - (void)dealFinalString:(NSString *)str totalNum:(NSUInteger)total {
  
+    //MARK: - 生成字符集，权重和霍夫曼树，写到全局字典dict里
     char * charSet = new char[total];
     int * weights = new int[total];
     int charSetSize = 0;
-    bool add;
     
+    bool add;
     for (int i = 0; i < total; i++) {
         add = 0;
         char c = [str characterAtIndex:i];
@@ -66,7 +116,8 @@
 
     NSSavePanel *savePanel = [NSSavePanel savePanel];
     [savePanel beginSheetModalForWindow:self.view.window completionHandler:^(NSInteger savedClick) {
-        if (savedClick) {
+        if (savedClick == 1) {
+            //MARK: - 把两个文件的path做好
             NSString *selectedPath = savePanel.URL.path;
             NSString *fatherDir = [[selectedPath stringByDeletingLastPathComponent] stringByAppendingString:@"/"];
             NSString *typedName = [selectedPath componentsSeparatedByString:@"/"].lastObject;
@@ -83,102 +134,51 @@
                 i++;
                 NSString *appended = [NSString stringWithFormat:@"(%d)", i];
                 newHfmPath = [hfmPath stringByAppendingString:appended];
-            }
+            }//
           
+            //MARK: - 把两数据分别写入本地
+            NSMutableString *mutStr = [[NSMutableString alloc] init];
+            for (int i = 0; i < total; i++) {
+                NSString *tempKey = [NSString stringWithFormat:@"%c", [str characterAtIndex:i]];
+                [mutStr appendString:[dict objectForKey:tempKey]];
+            }
+            //肯定是0 1，所以用ASCII
+            NSData *mutData = [mutStr dataUsingEncoding:NSASCIIStringEncoding];
             NSData *hfmData = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:nil];
-
+            //沙盒下总是创建失败
             bool creat2 = [fileMana createFileAtPath:newHfmPath contents:hfmData attributes:nil];
-            
-            bool creat1 = [fileMana createFileAtPath:selectedPath contents:nil attributes:nil];
+            bool creat1 = [fileMana createFileAtPath:selectedPath contents:mutData attributes:nil];
             if (!creat1 || !creat2) {
-                //TODO: - 为什么老是创建失败？？？除了几个特殊的文件夹
                 [self presentAlertWithMsg:@"创建文件时失败，请重试"];
                 return;
             }
-//            NSFileHandle *writer = [NSFileHandle fileHandleForWritingAtPath:newHfmPath];
-//            [writer writeData:hfmData];
- 
-            NSFileHandle *updater = [NSFileHandle fileHandleForUpdatingAtPath:selectedPath];
-//            updater writeData:<#(nonnull NSData *)#>//
-            NSMutableData *data = [[NSMutableData alloc] init];
- 
-            for (int i = 0; i < total; i++) {
-                NSString *tempKey = [NSString stringWithFormat:@"%c", [str characterAtIndex:i]];
-                [data appendData:[[dict objectForKey:tempKey] dataUsingEncoding:Encoding]];
-                if (!((i+1)%20)) {
-                    [updater seekToEndOfFile];
-                    [updater writeData:data];
-                    data = [[NSMutableData alloc] init];
-                }
-            }
-            if (data.length) {
-                [updater seekToEndOfFile];
-                [updater writeData:data];
-            }
- 
         }
     }];
  
     tree.Delete();
     delete [] charSet;
     delete [] weights;
-    
 }
 
-
-- (void)dealDataAtPath:(NSString *)path {
-    NSFileManager *fileMana = NSFileManager.defaultManager;
-    if ([fileMana fileExistsAtPath:path]) {
-        if ([fileMana isReadableFileAtPath:path]) {
-            NSData *data = [NSData dataWithContentsOfFile:path];
-            NSString *content = [[NSString alloc] initWithData:data encoding:Encoding];
-            NSUInteger len = content.length;
-            if (!data || !len) {
-                [self presentAlertWithMsg:@"未读取到内容或文件格式有误"];
-                return;
-            }
-            [self dealFinalString:content totalNum:len];
-        } else {
-            [self presentAlertWithMsg:@"没有权限访问该文件"];
+///取文件 里面调用 dealFinalString
+- (void)selectFileToEncode {
+    
+    __weak typeof(self) weakSelf = self;
+    [self selectPathIsDirAllowed:0 multiSelect:0 successHandler:^(NSArray *arr) {
+        NSString *path = [arr.firstObject path];
+        NSString *content = [[NSString alloc] initWithContentsOfFile:path usedEncoding:nil error:nil];
+        NSLog(@"%zd", Encoding);
+        NSUInteger len = content.length;
+        if (!len) {
+            [weakSelf presentAlertWithMsg:@"字符编码格式不符"];
+            return;
         }
-    } else
-        [self presentAlertWithMsg:@"选取的文件已不存在"];
-}
-    
-- (void)selectFilePanel {
-    
-    NSOpenPanel *panel = [NSOpenPanel openPanel];
-    __weak typeof(self)weakSelf = self;
-    panel.canCreateDirectories = 0;
-    panel.canChooseDirectories = 0;
-    panel.canChooseFiles = 1;
-    [panel setAllowsMultipleSelection:0];
-    [panel beginSheetModalForWindow:self.view.window completionHandler:^(NSInteger result) {
-        if (result)
-            [weakSelf dealDataAtPath:[panel.URLs.firstObject path]];
+        [weakSelf dealFinalString:content totalNum:len];
     }];
     
-}
-    
-- (void)presentAlertWithMsg:(NSString *)msg {
-    NSAlert *alert = [[NSAlert alloc] init];
-    [alert addButtonWithTitle:@"OK"];
-    alert.messageText = @"选取失败";
-    alert.informativeText = msg;
-    [alert setAlertStyle:NSAlertStyleWarning];
-    [alert beginSheetModalForWindow:self.view.window completionHandler:nil];
     
 }
-   
-    
 
 @end
-
-
-
-
-
-
-
 
 

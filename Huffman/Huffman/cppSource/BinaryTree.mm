@@ -79,6 +79,7 @@ BinaryTree<T> BinaryTree<T>::copy() const {
 
 template <typename T>
 void BinaryTree<T>::allPath() const {
+    dict = [[NSMutableDictionary alloc] init];
     if (!root)
         return;
     LinkedStack<char> s;
@@ -141,7 +142,7 @@ void BinaryTree<T>::allPath2(TreeNode<T> * n, LinkedStack<char>& stack) const {
     }
     if (!n->leftChild && !n->rightChild) {
         char * result = stack.output();
-        NSString * str = [NSString stringWithCString:result encoding:NSUTF8StringEncoding];
+        NSString * str = [NSString stringWithCString:result encoding:NSASCIIStringEncoding];
         NSString * key = [NSString stringWithFormat:@"%c", n->data];
         [dict setObject:str forKey:key];
         delete [] result;
