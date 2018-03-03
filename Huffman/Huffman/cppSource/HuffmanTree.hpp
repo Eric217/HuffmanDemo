@@ -11,7 +11,7 @@
 #ifndef HuffmanTree_hpp
 #define HuffmanTree_hpp
 
-#include "BinaryTree.hpp"
+#include "BinaryTree.mm"
 #include "MinHeap.hpp"
 
 template <typename T, typename Q>

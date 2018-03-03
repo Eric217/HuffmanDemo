@@ -20,7 +20,7 @@ public:
     ~LinkedStack();
     
     ///别忘了delete []
-    T * output(char print = '0') const;
+    T * output() const;
     bool isEmpty() const { return !top; }
     
     int size() const;
@@ -52,7 +52,7 @@ LinkedStack<T>::~LinkedStack<T>() {
 
 ///返回T数组为结果，如果带参数则顺带打印
 template <typename T>
-T * LinkedStack<T>::output(char print) const {
+T * LinkedStack<T>::output() const {
     if (!top)
         return 0;
     int s = size();
@@ -61,11 +61,6 @@ T * LinkedStack<T>::output(char print) const {
     for (int i = 0; i < s; i++) {
         result[s-i-1] = n->data;
         n = n->link;
-    }
-    if (print != '0') {
-        for (int i = 0; i < s; i++)
-            cout<<result[i]<<print;
-        cout<<endl;
     }
     return result;
 }

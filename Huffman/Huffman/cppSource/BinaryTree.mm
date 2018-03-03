@@ -10,6 +10,7 @@
 #define BinaryTree_hpp
 
 #include "LinkedStack.hpp"
+#include "LinkedQueue.hpp"
 
 template <typename T> class BinaryTree;
 
@@ -33,40 +34,41 @@ class BinaryTree {
     void copyPreOrder(TreeNode<T> * &, const TreeNode<T> *) const;
     void deletePostOrder(TreeNode<T> * &);
     void printPreOrder(TreeNode<T> *, string & split);
-    
+    void sizePreOrder(int &, const TreeNode<T> *) const;
+
     ///从左到右按"列"打印元素路径
-    void allPath(TreeNode<T> *, LinkedStack<T> &) const;
+    //void allPath(TreeNode<T> *, LinkedStack<T> &) const;
     ///用于霍夫曼的allPath，打印每个元素的编码
-    void allPath2(TreeNode<T> *, LinkedStack<int> &) const;
- 
+    void allPath2(TreeNode<T> *, LinkedStack<char> &) const;
+
+    
 public:
  
     ///缺省构造
     BinaryTree() { root = 0; }
+//    ///前序和中序构造
+//    BinaryTree(const T *, const T *, int);
     ///一个元素一棵树
     BinaryTree(const T & data) {
         root = new TreeNode<T>(data);
     }
-    ///复制构造 我们要把整颗树挖出来复制 而不单单是root
-//    BinaryTree(const BinaryTree<T> & t) {
-//        root = t.copy().root;
-//        //TODO: - 修改
-//    }
    
     BinaryTree<T> copy() const;
     
-    //TODO: - 我们暂时不自动删除一棵树
+    //TODO: - 我们不自动删除一棵树
     //~BinaryTree() { Delete(); }
     void Delete() { deletePostOrder(root); root = 0; }
     
-    ///1霍夫曼0值
-    void allPath(bool with01) const;///根到所有叶子结点的路径
- 
+    ///调用后 dict内容就有了
+    void allPath() const;
+    
+    int size() const;
+
     void makeTree(const T &, BinaryTree<T> &, BinaryTree<T> &);
     void breakTree(T &, BinaryTree<T> &, BinaryTree<T> &);
 
 };
-
+ 
 template <typename T>
 BinaryTree<T> BinaryTree<T>::copy() const {
     BinaryTree<T> to;
@@ -76,18 +78,11 @@ BinaryTree<T> BinaryTree<T>::copy() const {
 }
 
 template <typename T>
-void BinaryTree<T>::allPath(bool h) const {
-    if (!root) {
-        cout<<endl;
+void BinaryTree<T>::allPath() const {
+    if (!root)
         return;
-    }
-    if (h) {
-        LinkedStack<int> s;
-        allPath2(root, s);
-    } else {
-        LinkedStack<T> stack1;
-        allPath(root, stack1);
-    }
+    LinkedStack<char> s;
+    allPath2(root, s);
 }
  
 ///按次序左右孩子
@@ -129,43 +124,30 @@ void BinaryTree<T>::breakTree(T & recei, BinaryTree<T> & t1, BinaryTree<T> & t2)
 
 //MARK: - private functions
 
-template <typename T>
-void BinaryTree<T>::allPath(TreeNode<T>* n, LinkedStack<T>& stack) const {
-    if (!n)
-        return;
-    stack.push(n->data);
-    if (!n->leftChild && !n->rightChild) {
-        T * result = stack.output(',');
-        delete [] result;
-    }
-    else {
-        allPath(n->leftChild, stack);
-        allPath(n->rightChild, stack);
-    }
-    stack.pop();
- 
-}
 
 template <typename T>
-void BinaryTree<T>::allPath2(TreeNode<T> * n, LinkedStack<int>& stack) const {
+void BinaryTree<T>::allPath2(TreeNode<T> * n, LinkedStack<char>& stack) const {
     if (!n)
         return;
     if (n->leftChild) {
-        stack.push(0);
+        stack.push(HFMLEFTPATH);
         allPath2(n->leftChild, stack);
         stack.pop();
     }
     if (n->rightChild) {
-        stack.push(1);
+        stack.push(HFMRIGHTPATH);
         allPath2(n->rightChild, stack);
         stack.pop();
     }
     if (!n->leftChild && !n->rightChild) {
-      //  cout<<n->data<<": ";
-        int * result = stack.output(',');
+        char * result = stack.output();
+        NSString * str = [NSString stringWithCString:result encoding:NSUTF8StringEncoding];
+        NSString * key = [NSString stringWithFormat:@"%c", n->data];
+        [dict setObject:str forKey:key];
         delete [] result;
     }
 }
+
 
 //MARK: - 任务遍历
 template <typename R>
@@ -196,5 +178,22 @@ void BinaryTree<T>::copyPreOrder(TreeNode<T> * & to, const TreeNode<T> * t) cons
     copyPreOrder(to->leftChild, t->leftChild);
     copyPreOrder(to->rightChild, t->rightChild);
 }
+template <typename T>
+int BinaryTree<T>::size() const {
+    int count = 0;
+    sizePreOrder(count, root);
+    return count;
+}
+
+template <typename T>
+void BinaryTree<T>::sizePreOrder(int& count, const TreeNode<T>* t) const {
+    if (!t)
+        return;
+    count++;
+    sizePreOrder(count, t->leftChild);
+    sizePreOrder(count, t->rightChild);
+    
+}
+
 
 #endif /* BinaryTree_hpp */

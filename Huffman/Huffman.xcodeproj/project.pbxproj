@@ -37,7 +37,7 @@
 /* Begin PBXFileReference section */
 		070722BC2048EE4300F4CBE6 /* xcept.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = xcept.hpp; sourceTree = "<group>"; };
 		070722BD2048EE4300F4CBE6 /* LinkedStack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedStack.hpp; sourceTree = "<group>"; };
-		070722BE2048EE4300F4CBE6 /* BinaryTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BinaryTree.hpp; sourceTree = "<group>"; };
+		070722BE2048EE4300F4CBE6 /* BinaryTree.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BinaryTree.mm; sourceTree = "<group>"; };
 		070722BF2048EE4300F4CBE6 /* MinHeap.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MinHeap.hpp; sourceTree = "<group>"; };
 		070722C02048EE4300F4CBE6 /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
 		070722C12048EE4300F4CBE6 /* LinkedQueue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedQueue.hpp; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				070722C22048EE7A00F4CBE6 /* HuffmanTree.hpp */,
-				070722BE2048EE4300F4CBE6 /* BinaryTree.hpp */,
+				070722BE2048EE4300F4CBE6 /* BinaryTree.mm */,
 				070722C12048EE4300F4CBE6 /* LinkedQueue.hpp */,
 				070722BD2048EE4300F4CBE6 /* LinkedStack.hpp */,
 				070722BF2048EE4300F4CBE6 /* MinHeap.hpp */,
@@ -241,7 +241,7 @@
 						CreatedOnToolsVersion = 9.3;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -469,7 +469,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Huffman/Huffman.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Huffman/Info.plist;
@@ -487,7 +486,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Huffman/Huffman.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Huffman/Info.plist;

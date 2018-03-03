@@ -25,6 +25,7 @@ public:
     T last() const;
     LinkedQueue<T> & push(const T &);
     LinkedQueue<T> & pop(T &);
+    LinkedQueue<T> & pop();
 };
 
 template <typename T>
@@ -68,6 +69,20 @@ LinkedQueue<T> & LinkedQueue<T>::pop(T & r) {
         throw OutOfBounds();
     Node<T> * node = front->link;
     r = front->data;
+    delete front;
+    if (node)
+        front = node;
+    else
+        rear = front = 0;
+    return *this;
+}
+
+template <typename T>
+LinkedQueue<T> & LinkedQueue<T>::pop() {
+    if (!front)
+        throw OutOfBounds();
+    Node<T> * node = front->link;
+
     delete front;
     if (node)
         front = node;

@@ -13,6 +13,10 @@
 #define ZERO_SIGN '0'
 #define LEFT_HIGH 1
 #define SPLIT "，"
+#define HFMLEFTPATH '0'
+#define HFMRIGHTPATH '1'
+ 
+NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
 
 using namespace std;
 
