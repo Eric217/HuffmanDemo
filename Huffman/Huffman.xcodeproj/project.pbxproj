@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07B84A77204FC4F9008BFCBF /* LinkedSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B84A76204FC4F9008BFCBF /* LinkedSet.m */; };
 		07D38C42204A931D00F9FABC /* NSViewController+tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D38C41204A931D00F9FABC /* NSViewController+tools.m */; };
+		07DAFEDF204C206D00E74730 /* HuffmanTreeController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07DAFEDC204C206C00E74730 /* HuffmanTreeController.mm */; };
+		07DAFEE2204C3B5600E74730 /* NSButton+HuffmanUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DAFEE1204C3B5600E74730 /* NSButton+HuffmanUnit.m */; };
+		07DAFEE5204C459300E74730 /* TreePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DAFEE4204C459300E74730 /* TreePanel.m */; };
+		07EE5E82204FA81500E61049 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EE5E81204FA81500E61049 /* Config.m */; };
 		07F1760A2045005000223AEB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F176092045005000223AEB /* AppDelegate.m */; };
 		07F1760C2045005100223AEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07F1760B2045005100223AEB /* Assets.xcassets */; };
 		07F1760F2045005100223AEB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07F1760D2045005100223AEB /* MainMenu.xib */; };
@@ -43,8 +48,19 @@
 		070722C02048EE4300F4CBE6 /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
 		070722C12048EE4300F4CBE6 /* LinkedQueue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedQueue.hpp; sourceTree = "<group>"; };
 		070722C22048EE7A00F4CBE6 /* HuffmanTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HuffmanTree.hpp; sourceTree = "<group>"; };
+		07B84A73204FB4F2008BFCBF /* LinkedSet.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedSet.hpp; sourceTree = "<group>"; };
+		07B84A75204FC4F9008BFCBF /* LinkedSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedSet.h; sourceTree = "<group>"; };
+		07B84A76204FC4F9008BFCBF /* LinkedSet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkedSet.m; sourceTree = "<group>"; };
 		07D38C40204A931D00F9FABC /* NSViewController+tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSViewController+tools.h"; sourceTree = "<group>"; };
 		07D38C41204A931D00F9FABC /* NSViewController+tools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSViewController+tools.m"; sourceTree = "<group>"; };
+		07DAFEDB204C206C00E74730 /* HuffmanTreeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HuffmanTreeController.h; sourceTree = "<group>"; };
+		07DAFEDC204C206C00E74730 /* HuffmanTreeController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HuffmanTreeController.mm; sourceTree = "<group>"; };
+		07DAFEE0204C3B5600E74730 /* NSButton+HuffmanUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSButton+HuffmanUnit.h"; sourceTree = "<group>"; };
+		07DAFEE1204C3B5600E74730 /* NSButton+HuffmanUnit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSButton+HuffmanUnit.m"; sourceTree = "<group>"; };
+		07DAFEE3204C459300E74730 /* TreePanel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TreePanel.h; sourceTree = "<group>"; };
+		07DAFEE4204C459300E74730 /* TreePanel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TreePanel.m; sourceTree = "<group>"; };
+		07EE5E80204FA81500E61049 /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		07EE5E81204FA81500E61049 /* Config.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
 		07F176052045005000223AEB /* Huffman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Huffman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F176082045005000223AEB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		07F176092045005000223AEB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -96,11 +112,38 @@
 				070722BE2048EE4300F4CBE6 /* BinaryTree.mm */,
 				070722C12048EE4300F4CBE6 /* LinkedQueue.hpp */,
 				070722BD2048EE4300F4CBE6 /* LinkedStack.hpp */,
+				07B84A75204FC4F9008BFCBF /* LinkedSet.h */,
+				07B84A76204FC4F9008BFCBF /* LinkedSet.m */,
 				070722BF2048EE4300F4CBE6 /* MinHeap.hpp */,
 				070722C02048EE4300F4CBE6 /* Node.hpp */,
 				070722BC2048EE4300F4CBE6 /* xcept.hpp */,
+				07B84A73204FB4F2008BFCBF /* LinkedSet.hpp */,
 			);
 			path = cppSource;
+			sourceTree = "<group>";
+		};
+		07DAFED2204C203800E74730 /* DrawTree */ = {
+			isa = PBXGroup;
+			children = (
+				07DAFEE3204C459300E74730 /* TreePanel.h */,
+				07DAFEE4204C459300E74730 /* TreePanel.m */,
+				07DAFEDB204C206C00E74730 /* HuffmanTreeController.h */,
+				07DAFEDC204C206C00E74730 /* HuffmanTreeController.mm */,
+			);
+			path = DrawTree;
+			sourceTree = "<group>";
+		};
+		07DAFED3204C204B00E74730 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				07EE5E80204FA81500E61049 /* Config.h */,
+				07EE5E81204FA81500E61049 /* Config.m */,
+				07DAFEE0204C3B5600E74730 /* NSButton+HuffmanUnit.h */,
+				07DAFEE1204C3B5600E74730 /* NSButton+HuffmanUnit.m */,
+				07D38C40204A931D00F9FABC /* NSViewController+tools.h */,
+				07D38C41204A931D00F9FABC /* NSViewController+tools.m */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		07F175FC2045005000223AEB = {
@@ -129,6 +172,8 @@
 				07F176082045005000223AEB /* AppDelegate.h */,
 				07F176092045005000223AEB /* AppDelegate.m */,
 				07F1764920450FF400223AEB /* MainView */,
+				07DAFED2204C203800E74730 /* DrawTree */,
+				07DAFED3204C204B00E74730 /* Extension */,
 				070722BB2048EE2500F4CBE6 /* cppSource */,
 				07F176352045006D00223AEB /* support */,
 			);
@@ -156,6 +201,7 @@
 		07F176352045006D00223AEB /* support */ = {
 			isa = PBXGroup;
 			children = (
+				07F17644204509D500223AEB /* MainViewController.xib */,
 				07F1760B2045005100223AEB /* Assets.xcassets */,
 				07F1760D2045005100223AEB /* MainMenu.xib */,
 				07F176102045005100223AEB /* Info.plist */,
@@ -170,9 +216,6 @@
 			children = (
 				07F17642204509D500223AEB /* MainViewController.h */,
 				07F17643204509D500223AEB /* MainViewController.mm */,
-				07D38C40204A931D00F9FABC /* NSViewController+tools.h */,
-				07D38C41204A931D00F9FABC /* NSViewController+tools.m */,
-				07F17644204509D500223AEB /* MainViewController.xib */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -313,8 +356,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				07F176122045005100223AEB /* main.m in Sources */,
+				07EE5E82204FA81500E61049 /* Config.m in Sources */,
 				07F17645204509D500223AEB /* MainViewController.mm in Sources */,
+				07DAFEDF204C206D00E74730 /* HuffmanTreeController.mm in Sources */,
+				07DAFEE2204C3B5600E74730 /* NSButton+HuffmanUnit.m in Sources */,
+				07B84A77204FC4F9008BFCBF /* LinkedSet.m in Sources */,
 				07F1760A2045005000223AEB /* AppDelegate.m in Sources */,
+				07DAFEE5204C459300E74730 /* TreePanel.m in Sources */,
 				07D38C42204A931D00F9FABC /* NSViewController+tools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,12 +525,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Huffman/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.INGStudio.Test.Huffman;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -494,12 +543,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Huffman/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.INGStudio.Test.Huffman;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

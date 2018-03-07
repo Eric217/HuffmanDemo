@@ -13,12 +13,14 @@
 
 template <typename T> class LinkedQueue;
 template <typename T> class LinkedStack;
+template <typename T> class LinkedSet;
 
 template <typename T>
 class Node {
     friend class LinkedQueue<T>;
     friend class LinkedStack<T>;
- 
+    friend class LinkedSet<T>;
+    
     T data;
     Node<T> * link;
 };

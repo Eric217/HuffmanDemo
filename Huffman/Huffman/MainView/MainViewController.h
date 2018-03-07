@@ -12,6 +12,6 @@
 
 @property (nonatomic, strong) NSButton *encoder;
 @property (nonatomic, strong) NSButton *decoder;
+@property (nonatomic, strong) NSButton *drawTree;
 
- 
 @end

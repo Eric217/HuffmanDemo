@@ -9,10 +9,10 @@
 #import "MainViewController.h"
 #import "HuffmanTree.hpp"
 #import "NSViewController+tools.h"
+#import "HuffmanTreeController.h"
 
- 
 @interface MainViewController ()
-
+@property (assign) int treeHeight;
 @end
 
 @implementation MainViewController
@@ -26,14 +26,21 @@
 
     _encoder = [[NSButton alloc] initWithFrame:NSMakeRect(wid/5, hei*0.6, 100, 35)];
     _decoder = [[NSButton alloc] initWithFrame:NSMakeRect(wid*0.4+100, hei*0.6, 100, 35)];
+    _drawTree = [[NSButton alloc] initWithFrame:NSMakeRect(wid/5, hei*0.6-75, 100, 35)];
+
     _encoder.bezelStyle = NSRoundedBezelStyle;
     _decoder.bezelStyle = NSRoundedBezelStyle;
-    
+    _drawTree.bezelStyle = NSRoundedBezelStyle;
+
     [self.view addSubview:_decoder];
     [self.view addSubview:_encoder];
+    [self.view addSubview:_drawTree];
 
     [_encoder setTitle:@"开始编码"];
     [_decoder setTitle:@"解码"];
+    [_drawTree setTitle:@"显示树"];
+    
+    [_drawTree setButtonType:NSMomentaryPushInButton];
     [_decoder setButtonType:NSMomentaryPushInButton];
     [_encoder setButtonType:NSMomentaryPushInButton];
  
@@ -41,6 +48,14 @@
     [_decoder setTarget:self];
     [_encoder setAction:@selector(selectFileToEncode)];
     [_encoder setTarget:self];
+    [_drawTree setAction:@selector(drawTreeFromDict)];
+    [_drawTree setTarget:self];
+}
+
+- (void)drawTreeFromDict {
+    HuffmanTreeController *controller = [HuffmanTreeController treeControllerWithDict:dict treeHeight:_treeHeight];
+    NSWindow *window = [NSWindow windowWithContentViewController:controller];
+    [self.view.window addChildWindow:window ordered:NSWindowAbove];
 }
 
 - (void)selectFileToDecode {
@@ -112,6 +127,7 @@
     
     BinaryTree<char> tree = HuffmanTree(charSet, weights, charSetSize);
     tree.allPath();
+    _treeHeight = tree.height();
     NSLog(@"%@", dict);
 
     NSSavePanel *savePanel = [NSSavePanel savePanel];

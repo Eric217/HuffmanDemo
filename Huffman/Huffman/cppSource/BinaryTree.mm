@@ -9,8 +9,8 @@
 #ifndef BinaryTree_hpp
 #define BinaryTree_hpp
 
-#include "LinkedStack.hpp"
-#include "LinkedQueue.hpp"
+#import "LinkedStack.hpp"
+#import "LinkedQueue.hpp"
 
 template <typename T> class BinaryTree;
 
@@ -40,6 +40,7 @@ class BinaryTree {
     //void allPath(TreeNode<T> *, LinkedStack<T> &) const;
     ///用于霍夫曼的allPath，打印每个元素的编码
     void allPath2(TreeNode<T> *, LinkedStack<char> &) const;
+    int height(TreeNode<T> *) const;
 
     
 public:
@@ -63,6 +64,7 @@ public:
     void allPath() const;
     
     int size() const;
+    int height() const { return height(root); }
 
     void makeTree(const T &, BinaryTree<T> &, BinaryTree<T> &);
     void breakTree(T &, BinaryTree<T> &, BinaryTree<T> &);
@@ -85,7 +87,16 @@ void BinaryTree<T>::allPath() const {
     LinkedStack<char> s;
     allPath2(root, s);
 }
- 
+template <typename T>
+int BinaryTree<T>::height(TreeNode<T> * t) const {
+    if (!t)
+        return 0;
+    int hL = height(t->leftChild);
+    int hR = height(t->rightChild);
+    if (hL++ > hR++)
+        return hL;
+    return hR;
+}
 ///按次序左右孩子
 template <typename T>
 void BinaryTree<T>::makeTree(const T & element, BinaryTree<T> & t1, BinaryTree<T> & t2) {
