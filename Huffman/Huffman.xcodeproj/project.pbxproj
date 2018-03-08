@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07B84A77204FC4F9008BFCBF /* LinkedSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B84A76204FC4F9008BFCBF /* LinkedSet.m */; };
+		07CE13212050C5C400EC85C0 /* LinkedSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE131F2050C5C400EC85C0 /* LinkedSet.m */; };
+		07CE13232050CC4B00EC85C0 /* OCNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE13222050CC4B00EC85C0 /* OCNode.m */; };
+		07CE13262050D03A00EC85C0 /* Line.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE13252050D03A00EC85C0 /* Line.m */; };
 		07D38C42204A931D00F9FABC /* NSViewController+tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D38C41204A931D00F9FABC /* NSViewController+tools.m */; };
-		07DAFEDF204C206D00E74730 /* HuffmanTreeController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07DAFEDC204C206C00E74730 /* HuffmanTreeController.mm */; };
+		07DAFEDF204C206D00E74730 /* HuffmanTreeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DAFEDC204C206C00E74730 /* HuffmanTreeController.m */; };
 		07DAFEE2204C3B5600E74730 /* NSButton+HuffmanUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DAFEE1204C3B5600E74730 /* NSButton+HuffmanUnit.m */; };
 		07DAFEE5204C459300E74730 /* TreePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DAFEE4204C459300E74730 /* TreePanel.m */; };
 		07EE5E82204FA81500E61049 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EE5E81204FA81500E61049 /* Config.m */; };
@@ -49,12 +51,16 @@
 		070722C12048EE4300F4CBE6 /* LinkedQueue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedQueue.hpp; sourceTree = "<group>"; };
 		070722C22048EE7A00F4CBE6 /* HuffmanTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HuffmanTree.hpp; sourceTree = "<group>"; };
 		07B84A73204FB4F2008BFCBF /* LinkedSet.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedSet.hpp; sourceTree = "<group>"; };
-		07B84A75204FC4F9008BFCBF /* LinkedSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedSet.h; sourceTree = "<group>"; };
-		07B84A76204FC4F9008BFCBF /* LinkedSet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkedSet.m; sourceTree = "<group>"; };
+		07CE131E2050C5AD00EC85C0 /* OCNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCNode.h; sourceTree = "<group>"; };
+		07CE131F2050C5C400EC85C0 /* LinkedSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedSet.m; sourceTree = "<group>"; };
+		07CE13202050C5C400EC85C0 /* LinkedSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedSet.h; sourceTree = "<group>"; };
+		07CE13222050CC4B00EC85C0 /* OCNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCNode.m; sourceTree = "<group>"; };
+		07CE13242050D03A00EC85C0 /* Line.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Line.h; sourceTree = "<group>"; };
+		07CE13252050D03A00EC85C0 /* Line.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Line.m; sourceTree = "<group>"; };
 		07D38C40204A931D00F9FABC /* NSViewController+tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSViewController+tools.h"; sourceTree = "<group>"; };
 		07D38C41204A931D00F9FABC /* NSViewController+tools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSViewController+tools.m"; sourceTree = "<group>"; };
 		07DAFEDB204C206C00E74730 /* HuffmanTreeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HuffmanTreeController.h; sourceTree = "<group>"; };
-		07DAFEDC204C206C00E74730 /* HuffmanTreeController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HuffmanTreeController.mm; sourceTree = "<group>"; };
+		07DAFEDC204C206C00E74730 /* HuffmanTreeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HuffmanTreeController.m; sourceTree = "<group>"; };
 		07DAFEE0204C3B5600E74730 /* NSButton+HuffmanUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSButton+HuffmanUnit.h"; sourceTree = "<group>"; };
 		07DAFEE1204C3B5600E74730 /* NSButton+HuffmanUnit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSButton+HuffmanUnit.m"; sourceTree = "<group>"; };
 		07DAFEE3204C459300E74730 /* TreePanel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TreePanel.h; sourceTree = "<group>"; };
@@ -112,8 +118,6 @@
 				070722BE2048EE4300F4CBE6 /* BinaryTree.mm */,
 				070722C12048EE4300F4CBE6 /* LinkedQueue.hpp */,
 				070722BD2048EE4300F4CBE6 /* LinkedStack.hpp */,
-				07B84A75204FC4F9008BFCBF /* LinkedSet.h */,
-				07B84A76204FC4F9008BFCBF /* LinkedSet.m */,
 				070722BF2048EE4300F4CBE6 /* MinHeap.hpp */,
 				070722C02048EE4300F4CBE6 /* Node.hpp */,
 				070722BC2048EE4300F4CBE6 /* xcept.hpp */,
@@ -125,10 +129,16 @@
 		07DAFED2204C203800E74730 /* DrawTree */ = {
 			isa = PBXGroup;
 			children = (
+				07CE13242050D03A00EC85C0 /* Line.h */,
+				07CE13252050D03A00EC85C0 /* Line.m */,
+				07CE131E2050C5AD00EC85C0 /* OCNode.h */,
+				07CE13222050CC4B00EC85C0 /* OCNode.m */,
+				07CE13202050C5C400EC85C0 /* LinkedSet.h */,
+				07CE131F2050C5C400EC85C0 /* LinkedSet.m */,
 				07DAFEE3204C459300E74730 /* TreePanel.h */,
 				07DAFEE4204C459300E74730 /* TreePanel.m */,
 				07DAFEDB204C206C00E74730 /* HuffmanTreeController.h */,
-				07DAFEDC204C206C00E74730 /* HuffmanTreeController.mm */,
+				07DAFEDC204C206C00E74730 /* HuffmanTreeController.m */,
 			);
 			path = DrawTree;
 			sourceTree = "<group>";
@@ -358,12 +368,14 @@
 				07F176122045005100223AEB /* main.m in Sources */,
 				07EE5E82204FA81500E61049 /* Config.m in Sources */,
 				07F17645204509D500223AEB /* MainViewController.mm in Sources */,
-				07DAFEDF204C206D00E74730 /* HuffmanTreeController.mm in Sources */,
+				07DAFEDF204C206D00E74730 /* HuffmanTreeController.m in Sources */,
 				07DAFEE2204C3B5600E74730 /* NSButton+HuffmanUnit.m in Sources */,
-				07B84A77204FC4F9008BFCBF /* LinkedSet.m in Sources */,
+				07CE13212050C5C400EC85C0 /* LinkedSet.m in Sources */,
 				07F1760A2045005000223AEB /* AppDelegate.m in Sources */,
+				07CE13262050D03A00EC85C0 /* Line.m in Sources */,
 				07DAFEE5204C459300E74730 /* TreePanel.m in Sources */,
 				07D38C42204A931D00F9FABC /* NSViewController+tools.m in Sources */,
+				07CE13232050CC4B00EC85C0 /* OCNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

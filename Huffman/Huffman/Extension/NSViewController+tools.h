@@ -11,6 +11,7 @@
 @interface NSViewController (tools)
 
 - (void)selectPathIsDirAllowed:(BOOL)dirAllowed multiSelect:(BOOL)multiAllowed successHandler:(void (^) (NSArray *))handler;
+
 - (void)presentAlertWithMsg:(NSString *)msg;
 
 @end

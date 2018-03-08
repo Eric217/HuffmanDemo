@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 
 #define Zero_Sign "###"
-#define UnitSize 36
-#define SepaWidth UnitSize/2
+#define UnitSize 44
+#define SepaWidth 18
+#define HeightAngle M_PI/4
 
 #define HFMLEFTPATH_OC '0'
 #define HFMRIGHTPATH_OC '1'
@@ -19,9 +20,9 @@
 #define ScreenWidth NSScreen.mainScreen.frame.size.width
 #define ScreenHeigh NSScreen.mainScreen.frame.size.height
 
-
 @interface Config : NSObject
 
 + (void)logRect:(CGRect)rect;
++ (bool)comparePoint:(CGPoint)p1 and:(CGPoint)p2;
 
 @end

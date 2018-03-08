@@ -9,7 +9,7 @@
 #import "HuffmanTreeController.h"
 #import "TreePanel.h"
 #import "NSButton+HuffmanUnit.h"
-#import "MainViewController.h"
+#import "LinkedSet.h"
 
 @implementation HuffmanTreeController
 
@@ -29,17 +29,21 @@
     [super viewDidLoad];
     [self setupFrameSize];
     [self drawTree];
-    using namespace std;
-    
- 
 }
 
 - (void)setupFrameSize {
     int unitNum = (int)pow(2, _height-1);
     CGFloat totalWidth = UnitSize*unitNum + SepaWidth*(unitNum+1);
+    CGFloat y = ScreenHeigh-160;
     if (totalWidth > ScreenWidth)
         totalWidth = ScreenWidth;
-    self.view.frame = CGRectMake(ScreenWidth/2-totalWidth/2, 80, totalWidth, ScreenHeigh-160);
+    if (totalWidth < 500) {
+        totalWidth = 500;
+        y = 480;
+    } else if (totalWidth < 1000) {
+        y -= 400;
+    }
+    self.view.frame = CGRectMake(ScreenWidth/2-totalWidth/2, 80, totalWidth, y);
 }
 
 - (void)drawTree {
@@ -47,30 +51,40 @@
         NSLog(@"Not Initialized");
         return;
     }
-    TreePanel *p = [TreePanel panelWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) Legs:nil];
+    TreePanel *p = [[TreePanel alloc] initWithFrame:NSMakeRect(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     [self.view addSubview:p];
     CGPoint *locations = [self getLocations];
     
+    LinkedSet *buttonSet = [[LinkedSet alloc] init]; //装的是 内部节点的 locations (int)
+    LinkedSet *legSet = [[LinkedSet alloc] init]; //装的Line对象
     
-    NSMutableSet *buttonSet = [[NSMutableSet alloc] init]; //装的是 内部节点的 locations
-    NSMutableSet *legSet = [[NSMutableSet alloc] init]; //装的是 leg struct
     [_tree enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         NSString *str = obj;
         int len = (int)(str.length), result = 0;
         for (int i = 0; i < len; i++) {
-            
-        //    [buttonSet addObject:locations[result]];
+            [buttonSet pushWithData:result];
+            CGPoint st = CGPointMake(locations[result].x+UnitSize/2, locations[result].y);
             if ([str characterAtIndex:i] == HFMLEFTPATH_OC) {
                 result = result*2 + 1;
-            } else
+                CGPoint en = CGPointMake(locations[result].x+UnitSize, locations[result].y+UnitSize);
+                Line *line = [Line lineWithStart:st end:en];
+                [legSet pushWithLine:line];
+                
+            } else {
                 result = result*2 + 2;
+                CGPoint en = CGPointMake(locations[result].x, locations[result].y+UnitSize);
+                Line *line = [Line lineWithStart:st end:en];
+                [legSet pushWithLine:line];
+            }
         }
-        
-        
-        NSButton *but = [NSButton huffmanButtonWithLoca:locations[[self transformFromPath:obj]] andElement:key];
+        NSButton *but = [NSButton huffmanButtonWithLoca:locations[result] andElement:key];
         [p addSubview:but];
     }];
-    
+    p.legs = legSet;
+    [buttonSet enumeratDataWithBlock:^(int loca) {
+        NSButton *but = [NSButton huffmanButtonWithLoca:locations[loca] andElement:@Zero_Sign];
+        [p addSubview:but];
+    }];
     free(locations);
     
 }
@@ -79,10 +93,9 @@
     
     int len = (int)str.length, result = 0;
     for (int i = 0; i < len; i++) {
-        //NSMutableSet *mSet = [[NSMutableSet alloc] init];
-        if ([str characterAtIndex:i] == HFMLEFTPATH_OC) {
+        if ([str characterAtIndex:i] == HFMLEFTPATH_OC)
             result = result*2 + 1;
-        } else
+        else
             result = result*2 + 2;
     }
     return result;
@@ -108,7 +121,7 @@
             CGFloat x2 = x1 + bian/2 - UnitSize/2;
             CGFloat y2;
             if (j == s) {
-                y2 = points[point1Idx].y + UnitSize + bian*cos(30);
+                y2 = points[point1Idx].y + UnitSize + bian*cos(HeightAngle);
             } else
                 y2 = points[j-1].y;
             points[j] = CGPointMake(x2, y2);

@@ -21,6 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
  
+    _treeHeight = 0;
     CGFloat wid = self.view.bounds.size.width;
     CGFloat hei = self.view.bounds.size.height;
 
@@ -53,9 +54,14 @@
 }
 
 - (void)drawTreeFromDict {
+    if (_treeHeight <= 1) {
+        [self presentAlertWithMsg:@"请先构造树"];
+        return;
+    }
     HuffmanTreeController *controller = [HuffmanTreeController treeControllerWithDict:dict treeHeight:_treeHeight];
     NSWindow *window = [NSWindow windowWithContentViewController:controller];
     [self.view.window addChildWindow:window ordered:NSWindowAbove];
+    
 }
 
 - (void)selectFileToDecode {

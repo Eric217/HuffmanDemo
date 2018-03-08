@@ -9,17 +9,18 @@
 #import "NSButton+HuffmanUnit.h"
 
 @implementation NSButton (HuffmanUnit)
+
 + (NSButton *)huffmanButtonWithLoca:(CGPoint)l andElement:(NSString *)anElement {
 
     NSButton *but = [[NSButton alloc] initWithFrame:CGRectMake(l.x, l.y, UnitSize, UnitSize)];
-    but.bezelStyle = NSRoundedBezelStyle;
+    but.bezelStyle = NSTexturedSquareBezelStyle;
     [but setButtonType:NSMomentaryPushInButton];
+    [but setFont:[NSFont systemFontOfSize:29]];
     if ([anElement isEqual: @Zero_Sign]) {
         [but setTitle:@" "];
         but.enabled = 0;
     } else
         [but setTitle:anElement];
-    //NSLog(@"%f  %f", l.x, l.y);
     return but;
 }
 

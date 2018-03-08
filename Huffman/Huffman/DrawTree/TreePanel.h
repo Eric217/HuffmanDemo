@@ -7,10 +7,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "LinkedSet.h"
 
 @interface TreePanel : NSView
-@property (nonatomic, copy) NSArray *legs;
 
-+ (TreePanel *)panelWithFrame:(NSRect)f Legs:(NSArray *)arr;
+@property (nonatomic, strong) LinkedSet *legs;
 
 @end

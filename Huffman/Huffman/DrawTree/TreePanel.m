@@ -10,12 +10,6 @@
 
 @implementation TreePanel
 
-+ (TreePanel *)panelWithFrame:(NSRect)f Legs:(NSArray *)arr {
-    TreePanel *p = [[TreePanel alloc] initWithFrame:f];
-    p.legs = arr;
-    return p;
-}
-
 //每次点击按钮，都TM调用了drawRect!!!
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
@@ -23,8 +17,17 @@
         NSLog(@"Leg not Initialized");
         return;
     }
-
-
+    CGContextRef context = [NSGraphicsContext currentContext].CGContext;
+    CGMutablePathRef path = CGPathCreateMutable();
+    [_legs enumeratLegsWithBlock:^(CGPoint start, CGPoint end) {
+        CGPathMoveToPoint(path, nil, start.x, start.y);
+        CGPathAddLineToPoint(path, nil, end.x, end.y);
+    }];
+    CGContextSetLineWidth(context, 2);
+    CGContextSetStrokeColorWithColor(context, NSColor.blackColor.CGColor);
+    CGContextAddPath(context, path);
+    CGContextStrokePath(context);
 }
 
 @end
+
