@@ -111,9 +111,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		070722BB2048EE2500F4CBE6 /* cppSource */ = {
+		070722BB2048EE2500F4CBE6 /* DataStructure */ = {
 			isa = PBXGroup;
 			children = (
+				07CE13242050D03A00EC85C0 /* Line.h */,
+				07CE13252050D03A00EC85C0 /* Line.m */,
+				07CE131E2050C5AD00EC85C0 /* OCNode.h */,
+				07CE13222050CC4B00EC85C0 /* OCNode.m */,
+				07CE13202050C5C400EC85C0 /* LinkedSet.h */,
+				07CE131F2050C5C400EC85C0 /* LinkedSet.m */,
 				070722C22048EE7A00F4CBE6 /* HuffmanTree.hpp */,
 				070722BE2048EE4300F4CBE6 /* BinaryTree.mm */,
 				070722C12048EE4300F4CBE6 /* LinkedQueue.hpp */,
@@ -123,18 +129,12 @@
 				070722BC2048EE4300F4CBE6 /* xcept.hpp */,
 				07B84A73204FB4F2008BFCBF /* LinkedSet.hpp */,
 			);
-			path = cppSource;
+			path = DataStructure;
 			sourceTree = "<group>";
 		};
 		07DAFED2204C203800E74730 /* DrawTree */ = {
 			isa = PBXGroup;
 			children = (
-				07CE13242050D03A00EC85C0 /* Line.h */,
-				07CE13252050D03A00EC85C0 /* Line.m */,
-				07CE131E2050C5AD00EC85C0 /* OCNode.h */,
-				07CE13222050CC4B00EC85C0 /* OCNode.m */,
-				07CE13202050C5C400EC85C0 /* LinkedSet.h */,
-				07CE131F2050C5C400EC85C0 /* LinkedSet.m */,
 				07DAFEE3204C459300E74730 /* TreePanel.h */,
 				07DAFEE4204C459300E74730 /* TreePanel.m */,
 				07DAFEDB204C206C00E74730 /* HuffmanTreeController.h */,
@@ -146,7 +146,6 @@
 		07DAFED3204C204B00E74730 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				07EE5E80204FA81500E61049 /* Config.h */,
 				07EE5E81204FA81500E61049 /* Config.m */,
 				07DAFEE0204C3B5600E74730 /* NSButton+HuffmanUnit.h */,
 				07DAFEE1204C3B5600E74730 /* NSButton+HuffmanUnit.m */,
@@ -181,10 +180,11 @@
 			children = (
 				07F176082045005000223AEB /* AppDelegate.h */,
 				07F176092045005000223AEB /* AppDelegate.m */,
+				07EE5E80204FA81500E61049 /* Config.h */,
 				07F1764920450FF400223AEB /* MainView */,
 				07DAFED2204C203800E74730 /* DrawTree */,
 				07DAFED3204C204B00E74730 /* Extension */,
-				070722BB2048EE2500F4CBE6 /* cppSource */,
+				070722BB2048EE2500F4CBE6 /* DataStructure */,
 				07F176352045006D00223AEB /* support */,
 			);
 			path = Huffman;

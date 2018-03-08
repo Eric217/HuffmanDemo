@@ -11,6 +11,10 @@
 #import "NSButton+HuffmanUnit.h"
 #import "LinkedSet.h"
 
+@interface HuffmanTreeController ()
+@property (strong) NSScrollView *scrollView;
+@end
+
 @implementation HuffmanTreeController
 
 + (HuffmanTreeController *)treeControllerWithDict:(NSDictionary *)dict treeHeight:(int)height {
@@ -21,42 +25,42 @@
 }
 
 - (void)loadView {
-    NSView *aView = [[NSView alloc] init];
-    self.view = aView;
+    self.view = [[NSView alloc] init];
 }
 
+//思路：高度为N的二叉树，其所有可能节点的位置存到数组。对字典中的霍夫曼树遍历，把存在的节点和树杈利用位置数组初始化并保存到集合中。遍历集合，显示视图。
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupFrameSize];
-    [self drawTree];
-}
-
-- (void)setupFrameSize {
-    int unitNum = (int)pow(2, _height-1);
-    CGFloat totalWidth = UnitSize*unitNum + SepaWidth*(unitNum+1);
-    CGFloat y = ScreenHeigh-160;
-    if (totalWidth > ScreenWidth)
-        totalWidth = ScreenWidth;
-    if (totalWidth < 500) {
-        totalWidth = 500;
-        y = 480;
-    } else if (totalWidth < 1000) {
-        y -= 400;
-    }
-    self.view.frame = CGRectMake(ScreenWidth/2-totalWidth/2, 80, totalWidth, y);
-}
-
-- (void)drawTree {
     if (!_tree) {
         NSLog(@"Not Initialized");
         return;
     }
-    TreePanel *p = [[TreePanel alloc] initWithFrame:NSMakeRect(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    [self.view addSubview:p];
+    //MARK: - 确定各个frame
     CGPoint *locations = [self getLocations];
+    CGFloat contentH = locations[0].y + UnitSize + 55;
+    int unitNum = (int)pow(2, _height-1);
+    CGFloat contentW = UnitSize*unitNum + SepaWidth*(unitNum+1);
+    CGFloat w1, h1, colorSpace = 231.0/255;
+    if (contentH < ScreenHeigh) {
+        h1 = contentH;
+    } else
+        h1 = ScreenHeigh;
+    if (contentW < ScreenWidth) {
+        w1 = contentW;
+    } else
+        w1 = ScreenWidth;
     
-    LinkedSet *buttonSet = [[LinkedSet alloc] init]; //装的是 内部节点的 locations (int)
-    LinkedSet *legSet = [[LinkedSet alloc] init]; //装的Line对象
+    self.view.frame = CGRectMake(ScreenWidth/2-w1/2, ScreenHeigh/2-h1/2, w1, h1);
+    _scrollView = [[NSScrollView alloc] initWithFrame:CGRectMake(0, 0, w1, h1)];
+    [self.view addSubview:_scrollView];
+    TreePanel *p = [[TreePanel alloc] initWithFrame:CGRectMake(0, 0, contentW, contentH)];
+    [p setWantsLayer:1];
+    [p.layer setBackgroundColor:[NSColor colorWithRed:colorSpace green:colorSpace blue:colorSpace alpha:1].CGColor];
+    _scrollView.documentView = p;
+    
+    //MARK: - 对树字典遍历
+    LinkedSet *buttonSet = [[LinkedSet alloc] init]; //装的是内部节点在 locations中的位置
+    LinkedSet *legSet = [[LinkedSet alloc] init]; //装的Line对象，特例化的集合内部已实现Line的不重复(为了省事。正常的应该写个 isEqual)
     
     [_tree enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         NSString *str = obj;
@@ -80,6 +84,8 @@
         NSButton *but = [NSButton huffmanButtonWithLoca:locations[result] andElement:key];
         [p addSubview:but];
     }];
+    
+    //MARK: - 所有位置收集完毕，边交给drawRect，节点加子视图
     p.legs = legSet;
     [buttonSet enumeratDataWithBlock:^(int loca) {
         NSButton *but = [NSButton huffmanButtonWithLoca:locations[loca] andElement:@Zero_Sign];
@@ -87,18 +93,10 @@
     }];
     free(locations);
     
-}
-
-- (int)transformFromPath:(NSString *)str {
-    
-    int len = (int)str.length, result = 0;
-    for (int i = 0; i < len; i++) {
-        if ([str characterAtIndex:i] == HFMLEFTPATH_OC)
-            result = result*2 + 1;
-        else
-            result = result*2 + 2;
-    }
-    return result;
+    _scrollView.scrollerStyle = NSScrollerStyleOverlay;
+    _scrollView.hasVerticalScroller = 1;
+    _scrollView.hasHorizontalScroller = 1;
+    //[_scrollView scrollToEndOfDocument:nil];
 }
 
 - (CGPoint *)getLocations {
@@ -130,53 +128,5 @@
     }
     return points;
 }
-
-
-//- (void)drawTree {
-//    CGPoint starter = CGPointMake(self.view.frame.size.width/2-LegWidth-TextSizeW/2, self.view.frame.size.height-80);
-//    _root = [ELHuffmanUnit huffmanUnitWithLocation:starter value:@Zero_Sign andLevel:0];
-//    [self.view addSubview:_root];
-//
-//    __weak typeof(self) weakSelf = self;
-//    [_tree enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-//        NSString *str = obj;
-//        int len = (int)str.length;
-//        ELHuffmanUnit *rootTemp = weakSelf.root;
-//        int curLevel = 0;
-//        for (; curLevel < len-1; curLevel++) {
-//            if (HFMLEFTPATH_OC == [str characterAtIndex:curLevel]) {
-//                if (!rootTemp.leftChild) {
-//                    CGFloat curRate = pow(RADIX, curLevel+1);
-//                    CGPoint tempPoint = CGPointMake(rootTemp.frame.origin.x-TextSizeW-LegWidth*curRate, rootTemp.frame.origin.y-TextSizeH-LegHeight*curRate);
-//                    rootTemp.leftChild = [ELHuffmanUnit huffmanUnitWithLocation:tempPoint value:@Zero_Sign andLevel:curLevel+1];
-//                    [weakSelf.view addSubview:rootTemp.leftChild];
-//                }
-//                [rootTemp setLegsWithLeft:1 right:0];
-//                rootTemp = rootTemp.leftChild;
-//            } else {
-//                if (!rootTemp.rightChild) {
-//                    CGFloat curRate = pow(RADIX, curLevel+1);
-//                    CGPoint tempPoint = CGPointMake(rootTemp.frame.origin.x+rootTemp.frame.size.width-LegWidth*curRate, rootTemp.frame.origin.y-TextSizeH-LegHeight*curRate);
-//                    rootTemp.rightChild = [ELHuffmanUnit huffmanUnitWithLocation:tempPoint value:@Zero_Sign andLevel:curLevel+1];
-//                    [weakSelf.view addSubview:rootTemp.rightChild];
-//                }
-//                [rootTemp setLegsWithLeft:0 right:1];
-//                rootTemp = rootTemp.rightChild;
-//            }
-//        }
-//
-//        if (HFMLEFTPATH_OC == [str characterAtIndex:curLevel]) {
-//            [rootTemp setLegsWithLeft:1 right:0];
-//            NSText *aText = [NSText huffmanUnitWithLocation:CGPointMake(rootTemp.frame.origin.x-TextSizeW, rootTemp.frame.origin.y-TextSizeH) andElement:key];
-//            [weakSelf.view addSubview:aText];
-//        } else {
-//            [rootTemp setLegsWithLeft:0 right:1];
-//            NSText *aText = [NSText huffmanUnitWithLocation:CGPointMake(rootTemp.frame.origin.x+rootTemp.frame.size.width, rootTemp.frame.origin.y-TextSizeH) andElement:key];
-//            [weakSelf.view addSubview:aText];
-//        }
-//
-//    }];
-//
-//}
 
 @end

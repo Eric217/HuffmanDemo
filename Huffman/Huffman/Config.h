@@ -9,9 +9,10 @@
 #import <Foundation/Foundation.h>
 
 #define Zero_Sign "###"
-#define UnitSize 44
+static CGFloat UnitSize = 44;
+//#define UnitSize 44
 #define SepaWidth 18
-#define HeightAngle M_PI/4
+#define HeightAngle M_PI/3.75
 
 #define HFMLEFTPATH_OC '0'
 #define HFMRIGHTPATH_OC '1'
