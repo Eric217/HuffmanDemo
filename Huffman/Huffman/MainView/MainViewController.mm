@@ -10,6 +10,9 @@
 #import "HuffmanTree.hpp"
 #import "NSViewController+tools.h"
 #import "HuffmanTreeController.h"
+#import <fstream>
+
+using namespace std;
 
 @interface MainViewController ()
 @property (assign) int treeHeight;
@@ -188,6 +191,7 @@
     __weak typeof(self) weakSelf = self;
     [self selectPathIsDirAllowed:0 multiSelect:0 successHandler:^(NSArray *arr) {
         NSString *path = [arr.firstObject path];
+       
         NSString *content = [[NSString alloc] initWithContentsOfFile:path usedEncoding:nil error:nil];
         NSLog(@"%zd", Encoding);
         NSUInteger len = content.length;

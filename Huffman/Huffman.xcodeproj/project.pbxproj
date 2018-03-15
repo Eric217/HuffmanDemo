@@ -50,7 +50,6 @@
 		070722C02048EE4300F4CBE6 /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
 		070722C12048EE4300F4CBE6 /* LinkedQueue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedQueue.hpp; sourceTree = "<group>"; };
 		070722C22048EE7A00F4CBE6 /* HuffmanTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HuffmanTree.hpp; sourceTree = "<group>"; };
-		07B84A73204FB4F2008BFCBF /* LinkedSet.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedSet.hpp; sourceTree = "<group>"; };
 		07CE131E2050C5AD00EC85C0 /* OCNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCNode.h; sourceTree = "<group>"; };
 		07CE131F2050C5C400EC85C0 /* LinkedSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedSet.m; sourceTree = "<group>"; };
 		07CE13202050C5C400EC85C0 /* LinkedSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedSet.h; sourceTree = "<group>"; };
@@ -127,7 +126,6 @@
 				070722BF2048EE4300F4CBE6 /* MinHeap.hpp */,
 				070722C02048EE4300F4CBE6 /* Node.hpp */,
 				070722BC2048EE4300F4CBE6 /* xcept.hpp */,
-				07B84A73204FB4F2008BFCBF /* LinkedSet.hpp */,
 			);
 			path = DataStructure;
 			sourceTree = "<group>";
