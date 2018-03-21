@@ -7,100 +7,67 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07CE13212050C5C400EC85C0 /* LinkedSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE131F2050C5C400EC85C0 /* LinkedSet.m */; };
-		07CE13232050CC4B00EC85C0 /* OCNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE13222050CC4B00EC85C0 /* OCNode.m */; };
-		07CE13262050D03A00EC85C0 /* Line.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE13252050D03A00EC85C0 /* Line.m */; };
-		07D38C42204A931D00F9FABC /* NSViewController+tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D38C41204A931D00F9FABC /* NSViewController+tools.m */; };
-		07DAFEDF204C206D00E74730 /* HuffmanTreeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DAFEDC204C206C00E74730 /* HuffmanTreeController.m */; };
-		07DAFEE2204C3B5600E74730 /* NSButton+HuffmanUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DAFEE1204C3B5600E74730 /* NSButton+HuffmanUnit.m */; };
-		07DAFEE5204C459300E74730 /* TreePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DAFEE4204C459300E74730 /* TreePanel.m */; };
-		07EE5E82204FA81500E61049 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EE5E81204FA81500E61049 /* Config.m */; };
-		07F1760A2045005000223AEB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F176092045005000223AEB /* AppDelegate.m */; };
-		07F1760C2045005100223AEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07F1760B2045005100223AEB /* Assets.xcassets */; };
-		07F1760F2045005100223AEB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07F1760D2045005100223AEB /* MainMenu.xib */; };
-		07F176122045005100223AEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F176112045005100223AEB /* main.m */; };
-		07F1761D2045005100223AEB /* HuffmanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1761C2045005100223AEB /* HuffmanTests.m */; };
-		07F176282045005100223AEB /* HuffmanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F176272045005100223AEB /* HuffmanUITests.m */; };
-		07F17645204509D500223AEB /* MainViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07F17643204509D500223AEB /* MainViewController.mm */; };
-		07F17646204509D500223AEB /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07F17644204509D500223AEB /* MainViewController.xib */; };
+		073C0E3C2061D8E300035358 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 073C0E3B2061D8E300035358 /* AppDelegate.m */; };
+		073C0E3F2061D8E300035358 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 073C0E3E2061D8E300035358 /* ViewController.m */; };
+		073C0E412061D8E400035358 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 073C0E402061D8E400035358 /* Assets.xcassets */; };
+		073C0E442061D8E400035358 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 073C0E422061D8E400035358 /* Main.storyboard */; };
+		073C0E472061D8E400035358 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 073C0E462061D8E400035358 /* main.m */; };
+		073C0E522061D8E400035358 /* HuffmanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 073C0E512061D8E400035358 /* HuffmanTests.m */; };
+		073C0E5D2061D8E400035358 /* HuffmanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 073C0E5C2061D8E400035358 /* HuffmanUITests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		07F176192045005100223AEB /* PBXContainerItemProxy */ = {
+		073C0E4E2061D8E400035358 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 07F175FD2045005000223AEB /* Project object */;
+			containerPortal = 073C0E2F2061D8E300035358 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 07F176042045005000223AEB;
+			remoteGlobalIDString = 073C0E362061D8E300035358;
 			remoteInfo = Huffman;
 		};
-		07F176242045005100223AEB /* PBXContainerItemProxy */ = {
+		073C0E592061D8E400035358 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 07F175FD2045005000223AEB /* Project object */;
+			containerPortal = 073C0E2F2061D8E300035358 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 07F176042045005000223AEB;
+			remoteGlobalIDString = 073C0E362061D8E300035358;
 			remoteInfo = Huffman;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		070722BC2048EE4300F4CBE6 /* xcept.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = xcept.hpp; sourceTree = "<group>"; };
-		070722BD2048EE4300F4CBE6 /* LinkedStack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedStack.hpp; sourceTree = "<group>"; };
-		070722BE2048EE4300F4CBE6 /* BinaryTree.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BinaryTree.mm; sourceTree = "<group>"; };
-		070722BF2048EE4300F4CBE6 /* MinHeap.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MinHeap.hpp; sourceTree = "<group>"; };
-		070722C02048EE4300F4CBE6 /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
-		070722C12048EE4300F4CBE6 /* LinkedQueue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedQueue.hpp; sourceTree = "<group>"; };
-		070722C22048EE7A00F4CBE6 /* HuffmanTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HuffmanTree.hpp; sourceTree = "<group>"; };
-		07CE131E2050C5AD00EC85C0 /* OCNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCNode.h; sourceTree = "<group>"; };
-		07CE131F2050C5C400EC85C0 /* LinkedSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedSet.m; sourceTree = "<group>"; };
-		07CE13202050C5C400EC85C0 /* LinkedSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedSet.h; sourceTree = "<group>"; };
-		07CE13222050CC4B00EC85C0 /* OCNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCNode.m; sourceTree = "<group>"; };
-		07CE13242050D03A00EC85C0 /* Line.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Line.h; sourceTree = "<group>"; };
-		07CE13252050D03A00EC85C0 /* Line.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Line.m; sourceTree = "<group>"; };
-		07D38C40204A931D00F9FABC /* NSViewController+tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSViewController+tools.h"; sourceTree = "<group>"; };
-		07D38C41204A931D00F9FABC /* NSViewController+tools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSViewController+tools.m"; sourceTree = "<group>"; };
-		07DAFEDB204C206C00E74730 /* HuffmanTreeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HuffmanTreeController.h; sourceTree = "<group>"; };
-		07DAFEDC204C206C00E74730 /* HuffmanTreeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HuffmanTreeController.m; sourceTree = "<group>"; };
-		07DAFEE0204C3B5600E74730 /* NSButton+HuffmanUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSButton+HuffmanUnit.h"; sourceTree = "<group>"; };
-		07DAFEE1204C3B5600E74730 /* NSButton+HuffmanUnit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSButton+HuffmanUnit.m"; sourceTree = "<group>"; };
-		07DAFEE3204C459300E74730 /* TreePanel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TreePanel.h; sourceTree = "<group>"; };
-		07DAFEE4204C459300E74730 /* TreePanel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TreePanel.m; sourceTree = "<group>"; };
-		07EE5E80204FA81500E61049 /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
-		07EE5E81204FA81500E61049 /* Config.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
-		07F176052045005000223AEB /* Huffman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Huffman.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		07F176082045005000223AEB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		07F176092045005000223AEB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		07F1760B2045005100223AEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		07F1760E2045005100223AEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		07F176102045005100223AEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		07F176112045005100223AEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		07F176132045005100223AEB /* Huffman.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Huffman.entitlements; sourceTree = "<group>"; };
-		07F176182045005100223AEB /* HuffmanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HuffmanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		07F1761C2045005100223AEB /* HuffmanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HuffmanTests.m; sourceTree = "<group>"; };
-		07F1761E2045005100223AEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		07F176232045005100223AEB /* HuffmanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HuffmanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		07F176272045005100223AEB /* HuffmanUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HuffmanUITests.m; sourceTree = "<group>"; };
-		07F176292045005100223AEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		07F17642204509D500223AEB /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		07F17643204509D500223AEB /* MainViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainViewController.mm; sourceTree = "<group>"; };
-		07F17644204509D500223AEB /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		073C0E372061D8E300035358 /* Huffman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Huffman.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		073C0E3A2061D8E300035358 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		073C0E3B2061D8E300035358 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		073C0E3D2061D8E300035358 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		073C0E3E2061D8E300035358 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		073C0E402061D8E400035358 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		073C0E432061D8E400035358 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		073C0E452061D8E400035358 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		073C0E462061D8E400035358 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		073C0E482061D8E400035358 /* Huffman.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Huffman.entitlements; sourceTree = "<group>"; };
+		073C0E4D2061D8E400035358 /* HuffmanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HuffmanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		073C0E512061D8E400035358 /* HuffmanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HuffmanTests.m; sourceTree = "<group>"; };
+		073C0E532061D8E400035358 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		073C0E582061D8E400035358 /* HuffmanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HuffmanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		073C0E5C2061D8E400035358 /* HuffmanUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HuffmanUITests.m; sourceTree = "<group>"; };
+		073C0E5E2061D8E400035358 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		07F176022045005000223AEB /* Frameworks */ = {
+		073C0E342061D8E300035358 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		07F176152045005100223AEB /* Frameworks */ = {
+		073C0E4A2061D8E400035358 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		07F176202045005100223AEB /* Frameworks */ = {
+		073C0E552061D8E400035358 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -110,134 +77,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		070722BB2048EE2500F4CBE6 /* DataStructure */ = {
+		073C0E2E2061D8E300035358 = {
 			isa = PBXGroup;
 			children = (
-				07CE13242050D03A00EC85C0 /* Line.h */,
-				07CE13252050D03A00EC85C0 /* Line.m */,
-				07CE131E2050C5AD00EC85C0 /* OCNode.h */,
-				07CE13222050CC4B00EC85C0 /* OCNode.m */,
-				07CE13202050C5C400EC85C0 /* LinkedSet.h */,
-				07CE131F2050C5C400EC85C0 /* LinkedSet.m */,
-				070722C22048EE7A00F4CBE6 /* HuffmanTree.hpp */,
-				070722BE2048EE4300F4CBE6 /* BinaryTree.mm */,
-				070722C12048EE4300F4CBE6 /* LinkedQueue.hpp */,
-				070722BD2048EE4300F4CBE6 /* LinkedStack.hpp */,
-				070722BF2048EE4300F4CBE6 /* MinHeap.hpp */,
-				070722C02048EE4300F4CBE6 /* Node.hpp */,
-				070722BC2048EE4300F4CBE6 /* xcept.hpp */,
-			);
-			path = DataStructure;
-			sourceTree = "<group>";
-		};
-		07DAFED2204C203800E74730 /* DrawTree */ = {
-			isa = PBXGroup;
-			children = (
-				07DAFEE3204C459300E74730 /* TreePanel.h */,
-				07DAFEE4204C459300E74730 /* TreePanel.m */,
-				07DAFEDB204C206C00E74730 /* HuffmanTreeController.h */,
-				07DAFEDC204C206C00E74730 /* HuffmanTreeController.m */,
-			);
-			path = DrawTree;
-			sourceTree = "<group>";
-		};
-		07DAFED3204C204B00E74730 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				07EE5E81204FA81500E61049 /* Config.m */,
-				07DAFEE0204C3B5600E74730 /* NSButton+HuffmanUnit.h */,
-				07DAFEE1204C3B5600E74730 /* NSButton+HuffmanUnit.m */,
-				07D38C40204A931D00F9FABC /* NSViewController+tools.h */,
-				07D38C41204A931D00F9FABC /* NSViewController+tools.m */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
-		07F175FC2045005000223AEB = {
-			isa = PBXGroup;
-			children = (
-				07F176072045005000223AEB /* Huffman */,
-				07F1761B2045005100223AEB /* HuffmanTests */,
-				07F176262045005100223AEB /* HuffmanUITests */,
-				07F176062045005000223AEB /* Products */,
+				073C0E392061D8E300035358 /* Huffman */,
+				073C0E502061D8E400035358 /* HuffmanTests */,
+				073C0E5B2061D8E400035358 /* HuffmanUITests */,
+				073C0E382061D8E300035358 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		07F176062045005000223AEB /* Products */ = {
+		073C0E382061D8E300035358 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				07F176052045005000223AEB /* Huffman.app */,
-				07F176182045005100223AEB /* HuffmanTests.xctest */,
-				07F176232045005100223AEB /* HuffmanUITests.xctest */,
+				073C0E372061D8E300035358 /* Huffman.app */,
+				073C0E4D2061D8E400035358 /* HuffmanTests.xctest */,
+				073C0E582061D8E400035358 /* HuffmanUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		07F176072045005000223AEB /* Huffman */ = {
+		073C0E392061D8E300035358 /* Huffman */ = {
 			isa = PBXGroup;
 			children = (
-				07F176082045005000223AEB /* AppDelegate.h */,
-				07F176092045005000223AEB /* AppDelegate.m */,
-				07EE5E80204FA81500E61049 /* Config.h */,
-				07F1764920450FF400223AEB /* MainView */,
-				07DAFED2204C203800E74730 /* DrawTree */,
-				07DAFED3204C204B00E74730 /* Extension */,
-				070722BB2048EE2500F4CBE6 /* DataStructure */,
-				07F176352045006D00223AEB /* support */,
+				073C0E3A2061D8E300035358 /* AppDelegate.h */,
+				073C0E3B2061D8E300035358 /* AppDelegate.m */,
+				073C0E3D2061D8E300035358 /* ViewController.h */,
+				073C0E3E2061D8E300035358 /* ViewController.m */,
+				073C0E402061D8E400035358 /* Assets.xcassets */,
+				073C0E422061D8E400035358 /* Main.storyboard */,
+				073C0E452061D8E400035358 /* Info.plist */,
+				073C0E462061D8E400035358 /* main.m */,
+				073C0E482061D8E400035358 /* Huffman.entitlements */,
 			);
 			path = Huffman;
 			sourceTree = "<group>";
 		};
-		07F1761B2045005100223AEB /* HuffmanTests */ = {
+		073C0E502061D8E400035358 /* HuffmanTests */ = {
 			isa = PBXGroup;
 			children = (
-				07F1761C2045005100223AEB /* HuffmanTests.m */,
-				07F1761E2045005100223AEB /* Info.plist */,
+				073C0E512061D8E400035358 /* HuffmanTests.m */,
+				073C0E532061D8E400035358 /* Info.plist */,
 			);
 			path = HuffmanTests;
 			sourceTree = "<group>";
 		};
-		07F176262045005100223AEB /* HuffmanUITests */ = {
+		073C0E5B2061D8E400035358 /* HuffmanUITests */ = {
 			isa = PBXGroup;
 			children = (
-				07F176272045005100223AEB /* HuffmanUITests.m */,
-				07F176292045005100223AEB /* Info.plist */,
+				073C0E5C2061D8E400035358 /* HuffmanUITests.m */,
+				073C0E5E2061D8E400035358 /* Info.plist */,
 			);
 			path = HuffmanUITests;
-			sourceTree = "<group>";
-		};
-		07F176352045006D00223AEB /* support */ = {
-			isa = PBXGroup;
-			children = (
-				07F17644204509D500223AEB /* MainViewController.xib */,
-				07F1760B2045005100223AEB /* Assets.xcassets */,
-				07F1760D2045005100223AEB /* MainMenu.xib */,
-				07F176102045005100223AEB /* Info.plist */,
-				07F176112045005100223AEB /* main.m */,
-				07F176132045005100223AEB /* Huffman.entitlements */,
-			);
-			name = support;
-			sourceTree = "<group>";
-		};
-		07F1764920450FF400223AEB /* MainView */ = {
-			isa = PBXGroup;
-			children = (
-				07F17642204509D500223AEB /* MainViewController.h */,
-				07F17643204509D500223AEB /* MainViewController.mm */,
-			);
-			path = MainView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		07F176042045005000223AEB /* Huffman */ = {
+		073C0E362061D8E300035358 /* Huffman */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 07F1762C2045005100223AEB /* Build configuration list for PBXNativeTarget "Huffman" */;
+			buildConfigurationList = 073C0E612061D8E400035358 /* Build configuration list for PBXNativeTarget "Huffman" */;
 			buildPhases = (
-				07F176012045005000223AEB /* Sources */,
-				07F176022045005000223AEB /* Frameworks */,
-				07F176032045005000223AEB /* Resources */,
+				073C0E332061D8E300035358 /* Sources */,
+				073C0E342061D8E300035358 /* Frameworks */,
+				073C0E352061D8E300035358 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -245,73 +148,68 @@
 			);
 			name = Huffman;
 			productName = Huffman;
-			productReference = 07F176052045005000223AEB /* Huffman.app */;
+			productReference = 073C0E372061D8E300035358 /* Huffman.app */;
 			productType = "com.apple.product-type.application";
 		};
-		07F176172045005100223AEB /* HuffmanTests */ = {
+		073C0E4C2061D8E400035358 /* HuffmanTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 07F1762F2045005100223AEB /* Build configuration list for PBXNativeTarget "HuffmanTests" */;
+			buildConfigurationList = 073C0E642061D8E400035358 /* Build configuration list for PBXNativeTarget "HuffmanTests" */;
 			buildPhases = (
-				07F176142045005100223AEB /* Sources */,
-				07F176152045005100223AEB /* Frameworks */,
-				07F176162045005100223AEB /* Resources */,
+				073C0E492061D8E400035358 /* Sources */,
+				073C0E4A2061D8E400035358 /* Frameworks */,
+				073C0E4B2061D8E400035358 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				07F1761A2045005100223AEB /* PBXTargetDependency */,
+				073C0E4F2061D8E400035358 /* PBXTargetDependency */,
 			);
 			name = HuffmanTests;
 			productName = HuffmanTests;
-			productReference = 07F176182045005100223AEB /* HuffmanTests.xctest */;
+			productReference = 073C0E4D2061D8E400035358 /* HuffmanTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		07F176222045005100223AEB /* HuffmanUITests */ = {
+		073C0E572061D8E400035358 /* HuffmanUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 07F176322045005100223AEB /* Build configuration list for PBXNativeTarget "HuffmanUITests" */;
+			buildConfigurationList = 073C0E672061D8E400035358 /* Build configuration list for PBXNativeTarget "HuffmanUITests" */;
 			buildPhases = (
-				07F1761F2045005100223AEB /* Sources */,
-				07F176202045005100223AEB /* Frameworks */,
-				07F176212045005100223AEB /* Resources */,
+				073C0E542061D8E400035358 /* Sources */,
+				073C0E552061D8E400035358 /* Frameworks */,
+				073C0E562061D8E400035358 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				07F176252045005100223AEB /* PBXTargetDependency */,
+				073C0E5A2061D8E400035358 /* PBXTargetDependency */,
 			);
 			name = HuffmanUITests;
 			productName = HuffmanUITests;
-			productReference = 07F176232045005100223AEB /* HuffmanUITests.xctest */;
+			productReference = 073C0E582061D8E400035358 /* HuffmanUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		07F175FD2045005000223AEB /* Project object */ = {
+		073C0E2F2061D8E300035358 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = Eric;
 				TargetAttributes = {
-					07F176042045005000223AEB = {
+					073C0E362061D8E300035358 = {
 						CreatedOnToolsVersion = 9.3;
-						SystemCapabilities = {
-							com.apple.Sandbox = {
-								enabled = 0;
-							};
-						};
 					};
-					07F176172045005100223AEB = {
+					073C0E4C2061D8E400035358 = {
 						CreatedOnToolsVersion = 9.3;
-						TestTargetID = 07F176042045005000223AEB;
+						TestTargetID = 073C0E362061D8E300035358;
 					};
-					07F176222045005100223AEB = {
+					073C0E572061D8E400035358 = {
 						CreatedOnToolsVersion = 9.3;
-						TestTargetID = 07F176042045005000223AEB;
+						TestTargetID = 073C0E362061D8E300035358;
 					};
 				};
 			};
-			buildConfigurationList = 07F176002045005000223AEB /* Build configuration list for PBXProject "Huffman" */;
+			buildConfigurationList = 073C0E322061D8E300035358 /* Build configuration list for PBXProject "Huffman" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -319,37 +217,36 @@
 				en,
 				Base,
 			);
-			mainGroup = 07F175FC2045005000223AEB;
-			productRefGroup = 07F176062045005000223AEB /* Products */;
+			mainGroup = 073C0E2E2061D8E300035358;
+			productRefGroup = 073C0E382061D8E300035358 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				07F176042045005000223AEB /* Huffman */,
-				07F176172045005100223AEB /* HuffmanTests */,
-				07F176222045005100223AEB /* HuffmanUITests */,
+				073C0E362061D8E300035358 /* Huffman */,
+				073C0E4C2061D8E400035358 /* HuffmanTests */,
+				073C0E572061D8E400035358 /* HuffmanUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		07F176032045005000223AEB /* Resources */ = {
+		073C0E352061D8E300035358 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07F1760C2045005100223AEB /* Assets.xcassets in Resources */,
-				07F17646204509D500223AEB /* MainViewController.xib in Resources */,
-				07F1760F2045005100223AEB /* MainMenu.xib in Resources */,
+				073C0E412061D8E400035358 /* Assets.xcassets in Resources */,
+				073C0E442061D8E400035358 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		07F176162045005100223AEB /* Resources */ = {
+		073C0E4B2061D8E400035358 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		07F176212045005100223AEB /* Resources */ = {
+		073C0E562061D8E400035358 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -359,68 +256,60 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		07F176012045005000223AEB /* Sources */ = {
+		073C0E332061D8E300035358 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07F176122045005100223AEB /* main.m in Sources */,
-				07EE5E82204FA81500E61049 /* Config.m in Sources */,
-				07F17645204509D500223AEB /* MainViewController.mm in Sources */,
-				07DAFEDF204C206D00E74730 /* HuffmanTreeController.m in Sources */,
-				07DAFEE2204C3B5600E74730 /* NSButton+HuffmanUnit.m in Sources */,
-				07CE13212050C5C400EC85C0 /* LinkedSet.m in Sources */,
-				07F1760A2045005000223AEB /* AppDelegate.m in Sources */,
-				07CE13262050D03A00EC85C0 /* Line.m in Sources */,
-				07DAFEE5204C459300E74730 /* TreePanel.m in Sources */,
-				07D38C42204A931D00F9FABC /* NSViewController+tools.m in Sources */,
-				07CE13232050CC4B00EC85C0 /* OCNode.m in Sources */,
+				073C0E3F2061D8E300035358 /* ViewController.m in Sources */,
+				073C0E472061D8E400035358 /* main.m in Sources */,
+				073C0E3C2061D8E300035358 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		07F176142045005100223AEB /* Sources */ = {
+		073C0E492061D8E400035358 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07F1761D2045005100223AEB /* HuffmanTests.m in Sources */,
+				073C0E522061D8E400035358 /* HuffmanTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		07F1761F2045005100223AEB /* Sources */ = {
+		073C0E542061D8E400035358 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07F176282045005100223AEB /* HuffmanUITests.m in Sources */,
+				073C0E5D2061D8E400035358 /* HuffmanUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		07F1761A2045005100223AEB /* PBXTargetDependency */ = {
+		073C0E4F2061D8E400035358 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 07F176042045005000223AEB /* Huffman */;
-			targetProxy = 07F176192045005100223AEB /* PBXContainerItemProxy */;
+			target = 073C0E362061D8E300035358 /* Huffman */;
+			targetProxy = 073C0E4E2061D8E400035358 /* PBXContainerItemProxy */;
 		};
-		07F176252045005100223AEB /* PBXTargetDependency */ = {
+		073C0E5A2061D8E400035358 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 07F176042045005000223AEB /* Huffman */;
-			targetProxy = 07F176242045005100223AEB /* PBXContainerItemProxy */;
+			target = 073C0E362061D8E300035358 /* Huffman */;
+			targetProxy = 073C0E592061D8E400035358 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		07F1760D2045005100223AEB /* MainMenu.xib */ = {
+		073C0E422061D8E400035358 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				07F1760E2045005100223AEB /* Base */,
+				073C0E432061D8E400035358 /* Base */,
 			);
-			name = MainMenu.xib;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		07F1762A2045005100223AEB /* Debug */ = {
+		073C0E5F2061D8E400035358 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -478,7 +367,7 @@
 			};
 			name = Debug;
 		};
-		07F1762B2045005100223AEB /* Release */ = {
+		073C0E602061D8E400035358 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -529,43 +418,41 @@
 			};
 			name = Release;
 		};
-		07F1762D2045005100223AEB /* Debug */ = {
+		073C0E622061D8E400035358 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Huffman/Huffman.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Huffman/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = com.INGStudio.Test.Huffman;
+				PRODUCT_BUNDLE_IDENTIFIER = com.INGStudio.Huffman;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		07F1762E2045005100223AEB /* Release */ = {
+		073C0E632061D8E400035358 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Huffman/Huffman.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Huffman/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = com.INGStudio.Test.Huffman;
+				PRODUCT_BUNDLE_IDENTIFIER = com.INGStudio.Huffman;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
-		07F176302045005100223AEB /* Debug */ = {
+		073C0E652061D8E400035358 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -577,13 +464,13 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.INGStudio.Test.HuffmanTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.INGStudio.HuffmanTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Huffman.app/Contents/MacOS/Huffman";
 			};
 			name = Debug;
 		};
-		07F176312045005100223AEB /* Release */ = {
+		073C0E662061D8E400035358 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -595,13 +482,13 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.INGStudio.Test.HuffmanTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.INGStudio.HuffmanTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Huffman.app/Contents/MacOS/Huffman";
 			};
 			name = Release;
 		};
-		07F176332045005100223AEB /* Debug */ = {
+		073C0E682061D8E400035358 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -612,13 +499,13 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.INGStudio.Test.HuffmanUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.INGStudio.HuffmanUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = Huffman;
 			};
 			name = Debug;
 		};
-		07F176342045005100223AEB /* Release */ = {
+		073C0E692061D8E400035358 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -629,7 +516,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.INGStudio.Test.HuffmanUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.INGStudio.HuffmanUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = Huffman;
 			};
@@ -638,43 +525,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		07F176002045005000223AEB /* Build configuration list for PBXProject "Huffman" */ = {
+		073C0E322061D8E300035358 /* Build configuration list for PBXProject "Huffman" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				07F1762A2045005100223AEB /* Debug */,
-				07F1762B2045005100223AEB /* Release */,
+				073C0E5F2061D8E400035358 /* Debug */,
+				073C0E602061D8E400035358 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		07F1762C2045005100223AEB /* Build configuration list for PBXNativeTarget "Huffman" */ = {
+		073C0E612061D8E400035358 /* Build configuration list for PBXNativeTarget "Huffman" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				07F1762D2045005100223AEB /* Debug */,
-				07F1762E2045005100223AEB /* Release */,
+				073C0E622061D8E400035358 /* Debug */,
+				073C0E632061D8E400035358 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		07F1762F2045005100223AEB /* Build configuration list for PBXNativeTarget "HuffmanTests" */ = {
+		073C0E642061D8E400035358 /* Build configuration list for PBXNativeTarget "HuffmanTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				07F176302045005100223AEB /* Debug */,
-				07F176312045005100223AEB /* Release */,
+				073C0E652061D8E400035358 /* Debug */,
+				073C0E662061D8E400035358 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		07F176322045005100223AEB /* Build configuration list for PBXNativeTarget "HuffmanUITests" */ = {
+		073C0E672061D8E400035358 /* Build configuration list for PBXNativeTarget "HuffmanUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				07F176332045005100223AEB /* Debug */,
-				07F176342045005100223AEB /* Release */,
+				073C0E682061D8E400035358 /* Debug */,
+				073C0E692061D8E400035358 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 07F175FD2045005000223AEB /* Project object */;
+	rootObject = 073C0E2F2061D8E300035358 /* Project object */;
 }

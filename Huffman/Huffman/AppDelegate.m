@@ -2,33 +2,22 @@
 //  AppDelegate.m
 //  Huffman
 //
-//  Created by Eric on 27/02/2018.
+//  Created by Eric on 21/03/2018.
 //  Copyright © 2018 Eric. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "MainViewController.h"
+
 @interface AppDelegate ()
 
-@property (weak) IBOutlet NSWindow *window;
-@property (nonatomic, strong) MainViewController *mainViewController;
 @end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    _mainViewController = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
-    [_window.contentView addSubview:_mainViewController.view];
-    _mainViewController.view.frame = _window.contentView.bounds;
-    
+    // Insert code here to initialize your application
 }
 
-- (BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)flag {
-    if (!flag) {
-        [self.window makeKeyAndOrderFront:nil];
-    }
-    return 1;
-}
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
