@@ -12,12 +12,15 @@
 #import "Node.hpp"
 #import "MinHeap.hpp"
 
+@interface ViewController ()
+@property (assign) int treeHeight;
+@end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  
+    _treeHeight = 0;
     
 }
 
