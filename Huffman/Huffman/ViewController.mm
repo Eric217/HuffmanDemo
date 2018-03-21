@@ -9,15 +9,15 @@
 #import "ViewController.h"
 #import "LinkedSet.h"
 #import "Config.h"
+#import "Node.hpp"
 #import "MinHeap.hpp"
+
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [Config logRect:CGRectZero];
-    
-    MinHeap<int> h;
+  
     
 }
 

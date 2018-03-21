@@ -7,12 +7,6 @@
 //
 
 #import "Config.h"
-#include <iostream>
-using namespace std;
-
-class OutOfBounds {};
-class NoMemory {};
-
 
 @implementation Config
 

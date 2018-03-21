@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		073C0E3C2061D8E300035358 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 073C0E3B2061D8E300035358 /* AppDelegate.m */; };
-		073C0E3F2061D8E300035358 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 073C0E3E2061D8E300035358 /* ViewController.m */; };
+		073C0E3F2061D8E300035358 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 073C0E3E2061D8E300035358 /* ViewController.mm */; };
 		073C0E412061D8E400035358 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 073C0E402061D8E400035358 /* Assets.xcassets */; };
 		073C0E442061D8E400035358 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 073C0E422061D8E400035358 /* Main.storyboard */; };
 		073C0E472061D8E400035358 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 073C0E462061D8E400035358 /* main.m */; };
 		073C0E522061D8E400035358 /* HuffmanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 073C0E512061D8E400035358 /* HuffmanTests.m */; };
 		073C0E5D2061D8E400035358 /* HuffmanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 073C0E5C2061D8E400035358 /* HuffmanUITests.m */; };
+		07B35D302062016C006C4A81 /* OCNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B35D282062016C006C4A81 /* OCNode.m */; };
+		07B35D312062016C006C4A81 /* LinkedSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B35D292062016C006C4A81 /* LinkedSet.m */; };
+		07B35D322062016C006C4A81 /* Line.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B35D2E2062016C006C4A81 /* Line.m */; };
+		07B35D3520620211006C4A81 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B35D3420620211006C4A81 /* Config.m */; };
+		07B35D4A20622D02006C4A81 /* BinaryTree.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07B35D4920622D02006C4A81 /* BinaryTree.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +43,7 @@
 		073C0E3A2061D8E300035358 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		073C0E3B2061D8E300035358 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		073C0E3D2061D8E300035358 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		073C0E3E2061D8E300035358 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		073C0E3E2061D8E300035358 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		073C0E402061D8E400035358 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		073C0E432061D8E400035358 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		073C0E452061D8E400035358 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +55,21 @@
 		073C0E582061D8E400035358 /* HuffmanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HuffmanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		073C0E5C2061D8E400035358 /* HuffmanUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HuffmanUITests.m; sourceTree = "<group>"; };
 		073C0E5E2061D8E400035358 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07B35D262062016C006C4A81 /* Line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Line.h; sourceTree = "<group>"; };
+		07B35D282062016C006C4A81 /* OCNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCNode.m; sourceTree = "<group>"; };
+		07B35D292062016C006C4A81 /* LinkedSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedSet.m; sourceTree = "<group>"; };
+		07B35D2A2062016C006C4A81 /* OCNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCNode.h; sourceTree = "<group>"; };
+		07B35D2B2062016C006C4A81 /* LinkedSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedSet.h; sourceTree = "<group>"; };
+		07B35D2E2062016C006C4A81 /* Line.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Line.m; sourceTree = "<group>"; };
+		07B35D3320620204006C4A81 /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		07B35D3420620211006C4A81 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
+		07B35D4320622B3B006C4A81 /* xcept.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = xcept.hpp; sourceTree = "<group>"; };
+		07B35D4420622B68006C4A81 /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
+		07B35D4520622BC5006C4A81 /* LinkedStack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedStack.hpp; sourceTree = "<group>"; };
+		07B35D4620622BC5006C4A81 /* LinkedQueue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedQueue.hpp; sourceTree = "<group>"; };
+		07B35D4720622BC5006C4A81 /* MinHeap.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MinHeap.hpp; sourceTree = "<group>"; };
+		07B35D4920622D02006C4A81 /* BinaryTree.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BinaryTree.mm; sourceTree = "<group>"; };
+		07B35D4B20622EEA006C4A81 /* HuffmanTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HuffmanTree.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,15 +120,13 @@
 		073C0E392061D8E300035358 /* Huffman */ = {
 			isa = PBXGroup;
 			children = (
-				073C0E3A2061D8E300035358 /* AppDelegate.h */,
-				073C0E3B2061D8E300035358 /* AppDelegate.m */,
 				073C0E3D2061D8E300035358 /* ViewController.h */,
-				073C0E3E2061D8E300035358 /* ViewController.m */,
-				073C0E402061D8E400035358 /* Assets.xcassets */,
-				073C0E422061D8E400035358 /* Main.storyboard */,
-				073C0E452061D8E400035358 /* Info.plist */,
-				073C0E462061D8E400035358 /* main.m */,
-				073C0E482061D8E400035358 /* Huffman.entitlements */,
+				073C0E3E2061D8E300035358 /* ViewController.mm */,
+				07B35D3420620211006C4A81 /* Config.m */,
+				07B35D4320622B3B006C4A81 /* xcept.hpp */,
+				07B35D3320620204006C4A81 /* Config.h */,
+				07B35D2220620018006C4A81 /* DataStructure */,
+				07B35D212061FFE1006C4A81 /* support */,
 			);
 			path = Huffman;
 			sourceTree = "<group>";
@@ -129,6 +147,71 @@
 				073C0E5E2061D8E400035358 /* Info.plist */,
 			);
 			path = HuffmanUITests;
+			sourceTree = "<group>";
+		};
+		07B35D212061FFE1006C4A81 /* support */ = {
+			isa = PBXGroup;
+			children = (
+				073C0E462061D8E400035358 /* main.m */,
+				073C0E452061D8E400035358 /* Info.plist */,
+				073C0E3A2061D8E300035358 /* AppDelegate.h */,
+				073C0E3B2061D8E300035358 /* AppDelegate.m */,
+				073C0E402061D8E400035358 /* Assets.xcassets */,
+				073C0E422061D8E400035358 /* Main.storyboard */,
+				073C0E482061D8E400035358 /* Huffman.entitlements */,
+			);
+			name = support;
+			sourceTree = "<group>";
+		};
+		07B35D2220620018006C4A81 /* DataStructure */ = {
+			isa = PBXGroup;
+			children = (
+				07B35D4820622BDF006C4A81 /* Huffman */,
+				07B35D38206206F8006C4A81 /* Linked */,
+				07B35D37206206F2006C4A81 /* Node */,
+				07B35D36206206E9006C4A81 /* Line */,
+			);
+			path = DataStructure;
+			sourceTree = "<group>";
+		};
+		07B35D36206206E9006C4A81 /* Line */ = {
+			isa = PBXGroup;
+			children = (
+				07B35D262062016C006C4A81 /* Line.h */,
+				07B35D2E2062016C006C4A81 /* Line.m */,
+			);
+			name = Line;
+			sourceTree = "<group>";
+		};
+		07B35D37206206F2006C4A81 /* Node */ = {
+			isa = PBXGroup;
+			children = (
+				07B35D4420622B68006C4A81 /* Node.hpp */,
+				07B35D2A2062016C006C4A81 /* OCNode.h */,
+				07B35D282062016C006C4A81 /* OCNode.m */,
+			);
+			name = Node;
+			sourceTree = "<group>";
+		};
+		07B35D38206206F8006C4A81 /* Linked */ = {
+			isa = PBXGroup;
+			children = (
+				07B35D2B2062016C006C4A81 /* LinkedSet.h */,
+				07B35D292062016C006C4A81 /* LinkedSet.m */,
+				07B35D4620622BC5006C4A81 /* LinkedQueue.hpp */,
+				07B35D4520622BC5006C4A81 /* LinkedStack.hpp */,
+			);
+			name = Linked;
+			sourceTree = "<group>";
+		};
+		07B35D4820622BDF006C4A81 /* Huffman */ = {
+			isa = PBXGroup;
+			children = (
+				07B35D4B20622EEA006C4A81 /* HuffmanTree.hpp */,
+				07B35D4920622D02006C4A81 /* BinaryTree.mm */,
+				07B35D4720622BC5006C4A81 /* MinHeap.hpp */,
+			);
+			name = Huffman;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,9 +343,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				073C0E3F2061D8E300035358 /* ViewController.m in Sources */,
+				07B35D3520620211006C4A81 /* Config.m in Sources */,
+				073C0E3F2061D8E300035358 /* ViewController.mm in Sources */,
+				07B35D4A20622D02006C4A81 /* BinaryTree.mm in Sources */,
+				07B35D322062016C006C4A81 /* Line.m in Sources */,
 				073C0E472061D8E400035358 /* main.m in Sources */,
 				073C0E3C2061D8E300035358 /* AppDelegate.m in Sources */,
+				07B35D302062016C006C4A81 /* OCNode.m in Sources */,
+				07B35D312062016C006C4A81 /* LinkedSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
