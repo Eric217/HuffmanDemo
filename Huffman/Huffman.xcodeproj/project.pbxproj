@@ -19,6 +19,10 @@
 		07B35D322062016C006C4A81 /* Line.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B35D2E2062016C006C4A81 /* Line.m */; };
 		07B35D3520620211006C4A81 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B35D3420620211006C4A81 /* Config.m */; };
 		07B35D4A20622D02006C4A81 /* BinaryTree.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07B35D4920622D02006C4A81 /* BinaryTree.mm */; };
+		07B35D5120623385006C4A81 /* NSViewController+tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B35D4D20623385006C4A81 /* NSViewController+tools.m */; };
+		07B35D5220623385006C4A81 /* NSButton+HuffmanUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B35D4E20623385006C4A81 /* NSButton+HuffmanUnit.m */; };
+		07B35D5820623478006C4A81 /* TreePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B35D5520623478006C4A81 /* TreePanel.m */; };
+		07B35D5920623478006C4A81 /* HuffmanTreeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B35D5620623478006C4A81 /* HuffmanTreeController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +74,14 @@
 		07B35D4720622BC5006C4A81 /* MinHeap.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MinHeap.hpp; sourceTree = "<group>"; };
 		07B35D4920622D02006C4A81 /* BinaryTree.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BinaryTree.mm; sourceTree = "<group>"; };
 		07B35D4B20622EEA006C4A81 /* HuffmanTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HuffmanTree.hpp; sourceTree = "<group>"; };
+		07B35D4D20623385006C4A81 /* NSViewController+tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSViewController+tools.m"; sourceTree = "<group>"; };
+		07B35D4E20623385006C4A81 /* NSButton+HuffmanUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSButton+HuffmanUnit.m"; sourceTree = "<group>"; };
+		07B35D4F20623385006C4A81 /* NSButton+HuffmanUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSButton+HuffmanUnit.h"; sourceTree = "<group>"; };
+		07B35D5020623385006C4A81 /* NSViewController+tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSViewController+tools.h"; sourceTree = "<group>"; };
+		07B35D5420623478006C4A81 /* HuffmanTreeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HuffmanTreeController.h; sourceTree = "<group>"; };
+		07B35D5520623478006C4A81 /* TreePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreePanel.m; sourceTree = "<group>"; };
+		07B35D5620623478006C4A81 /* HuffmanTreeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HuffmanTreeController.m; sourceTree = "<group>"; };
+		07B35D5720623478006C4A81 /* TreePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreePanel.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,11 +132,8 @@
 		073C0E392061D8E300035358 /* Huffman */ = {
 			isa = PBXGroup;
 			children = (
-				073C0E3D2061D8E300035358 /* ViewController.h */,
-				073C0E3E2061D8E300035358 /* ViewController.mm */,
-				07B35D3420620211006C4A81 /* Config.m */,
-				07B35D4320622B3B006C4A81 /* xcept.hpp */,
-				07B35D3320620204006C4A81 /* Config.h */,
+				07B35D532062346D006C4A81 /* View */,
+				07B35D4C20623366006C4A81 /* Common */,
 				07B35D2220620018006C4A81 /* DataStructure */,
 				07B35D212061FFE1006C4A81 /* support */,
 			);
@@ -214,6 +223,33 @@
 			name = Huffman;
 			sourceTree = "<group>";
 		};
+		07B35D4C20623366006C4A81 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				07B35D3320620204006C4A81 /* Config.h */,
+				07B35D3420620211006C4A81 /* Config.m */,
+				07B35D4320622B3B006C4A81 /* xcept.hpp */,
+				07B35D4F20623385006C4A81 /* NSButton+HuffmanUnit.h */,
+				07B35D4E20623385006C4A81 /* NSButton+HuffmanUnit.m */,
+				07B35D5020623385006C4A81 /* NSViewController+tools.h */,
+				07B35D4D20623385006C4A81 /* NSViewController+tools.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		07B35D532062346D006C4A81 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				073C0E3D2061D8E300035358 /* ViewController.h */,
+				073C0E3E2061D8E300035358 /* ViewController.mm */,
+				07B35D5420623478006C4A81 /* HuffmanTreeController.h */,
+				07B35D5620623478006C4A81 /* HuffmanTreeController.m */,
+				07B35D5720623478006C4A81 /* TreePanel.h */,
+				07B35D5520623478006C4A81 /* TreePanel.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -281,6 +317,11 @@
 				TargetAttributes = {
 					073C0E362061D8E300035358 = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 					073C0E4C2061D8E400035358 = {
 						CreatedOnToolsVersion = 9.3;
@@ -344,8 +385,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				07B35D3520620211006C4A81 /* Config.m in Sources */,
+				07B35D5820623478006C4A81 /* TreePanel.m in Sources */,
 				073C0E3F2061D8E300035358 /* ViewController.mm in Sources */,
+				07B35D5920623478006C4A81 /* HuffmanTreeController.m in Sources */,
+				07B35D5220623385006C4A81 /* NSButton+HuffmanUnit.m in Sources */,
 				07B35D4A20622D02006C4A81 /* BinaryTree.mm in Sources */,
+				07B35D5120623385006C4A81 /* NSViewController+tools.m in Sources */,
 				07B35D322062016C006C4A81 /* Line.m in Sources */,
 				073C0E472061D8E400035358 /* main.m in Sources */,
 				073C0E3C2061D8E300035358 /* AppDelegate.m in Sources */,
@@ -510,7 +555,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Huffman/Huffman.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Huffman/Info.plist;
@@ -527,7 +571,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Huffman/Huffman.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Huffman/Info.plist;

@@ -58,11 +58,12 @@ public:
     void Delete() {
         deletePostOrder(root); root = 0;
         if (dict)
-            [dict dealloc];
+            [dict removeAllObjects];
+        
     }
     
     ///调用后 dict内容就有了
-    void allPath() const;
+    void allPath();
     
     int size() const;
     int height() const { return height(root); }
@@ -81,7 +82,7 @@ BinaryTree<T> BinaryTree<T>::copy() const {
 }
 
 template <typename T>
-void BinaryTree<T>::allPath() const {
+void BinaryTree<T>::allPath() {
     dict = [[NSMutableDictionary alloc] init];
     if (!root)
         return;

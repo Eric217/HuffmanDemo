@@ -21,7 +21,6 @@
             handler(panel.URLs);
     }];
     
-    
 }
 
 - (void)presentAlertWithMsg:(NSString *)msg {

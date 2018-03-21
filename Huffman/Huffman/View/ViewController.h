@@ -22,7 +22,7 @@
 @property (strong) IBOutlet NSButton *unZipBut;
 
 @property (strong) IBOutlet NSTextField *titleContent;
-@property (strong) IBOutlet NSTextField *realContent;
+@property (strong) IBOutlet NSTextView *realContent;
 
 @end
 
