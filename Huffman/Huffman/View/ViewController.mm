@@ -12,6 +12,7 @@
 #import "NSViewController+tools.h"
 #import "HuffmanTree.hpp"
 #import "HuffmanTreeController.h"
+#import <fstream>
 #import <Foundation/Foundation.h>
 
 @interface ViewController ()
@@ -21,6 +22,9 @@
 @property (assign) NSUInteger contentL;
 @property (strong) NSString *codefileStr;
 @property (strong) NSString *codePrintStr;
+//----------------------compress
+@property (assign) int rest;
+
 @end
 
 @implementation ViewController
@@ -277,11 +281,233 @@
 
 
 - (IBAction)compress:(id)sender {
- 
+   
+    __weak typeof(self) weakSelf = self;
+    [self selectPathIsDirAllowed:0 multiSelect:0 successHandler:^(NSArray *arr) {
+        NSString *path = [arr.firstObject path];
+        
+        NSString *content = [[NSString alloc] initWithContentsOfFile:path usedEncoding:nil error:nil];
+        
+        NSUInteger len = content.length;
+        if (!len) {
+            [weakSelf presentAlertWithMsg:@"字符编码格式不符"];
+            return;
+        }
+        weakSelf.contentStr = content;
+        weakSelf.contentL = len;
+     
+        
+        //MARK: - 生成字符集，权重和霍夫曼树，写到全局字典dict里
+        char * charSet = new char[weakSelf.contentL];
+        int * weights = new int[weakSelf.contentL];
+        int charSetSize = 0;
+        
+        bool add;
+        for (int i = 0; i < weakSelf.contentL; i++) {
+            add = 0;
+            char c = [weakSelf.contentStr characterAtIndex:i];
+            for (int j = 0; j < charSetSize; j++) {
+                if (charSet[j] == c) {
+                    weights[j]++;
+                    add = 1;
+                    break;
+                }
+            }
+            if (!add) {
+                charSet[charSetSize] = c;
+                weights[charSetSize++] = 1;
+            }
+        }
+        
+        BinaryTree<char> tree = HuffmanTree(charSet, weights, charSetSize);
+        tree.allPath();
+        weakSelf.treeHeight = tree.height();
+        NSString * dictStr = [NSString stringWithFormat:@"%@", tree.dict];
+        [weakSelf.realContent setString:dictStr];
+        
+        [weakSelf.titleContent setStringValue:@"hfmtree"];
+        [self.saveCodeBut setEnabled:0];
+        [self.saveHfmBut setEnabled:1];
+        weakSelf.mutDict = tree.dict.copy;
+        
+        tree.Delete();
+        delete [] charSet;
+        delete [] weights;
+        
+        NSSavePanel *savePanel = [NSSavePanel savePanel];
+        [savePanel setNameFieldStringValue:@"encoded.hfm"];
+        [savePanel setDirectoryURL:[NSURL fileURLWithPath:@"/Users/eric/desktop"]];
+        
+        [savePanel beginSheetModalForWindow:self.view.window completionHandler:^(NSInteger savedClick) {
+            if (savedClick == 1) {
+                NSString *selectedPath = savePanel.URL.path;
+                self.rest = [self writeBinaryToPath:selectedPath content:content andLength:len];
+            }
+        }];
+    }];
+    
+  
     
 }
 
+- (void)writeByte:(ofstream &)f_out andArr:(const char *)arr {
+    char c[1] = { 0 };
+    if (arr[0] == HFMRIGHTPATH)
+        c[0] |= 128;
+    if (arr[1] == HFMRIGHTPATH)
+        c[0] |= 64;
+    if (arr[2] == HFMRIGHTPATH)
+        c[0] |= 32;
+    if (arr[3] == HFMRIGHTPATH)
+        c[0] |= 16;
+    if (arr[4] == HFMRIGHTPATH)
+        c[0] |= 8;
+    if (arr[5] == HFMRIGHTPATH)
+        c[0] |= 4;
+    if (arr[6] == HFMRIGHTPATH)
+        c[0] |= 2;
+    if (arr[7] == HFMRIGHTPATH)
+        c[0] |= 1;
+    
+    f_out.write(c, 1);
+}
+
+
+- (short)writeBinaryToPath:(NSString *)path content:(NSString *)rawArr andLength:(NSUInteger)length {
+    string PATH([path cStringUsingEncoding:NSASCIIStringEncoding]);
+    ofstream f_out(PATH, ios::app | ios::binary | ios::out);
+    if (!f_out.is_open()) {
+        [self presentAlertWithMsg:@"No Right To Access"];
+        return 0;
+    }
+    
+    NSMutableString * str = [[NSMutableString alloc] init];
+    NSMutableString * restStr = [[NSMutableString alloc] init];
+   
+    const char * arr = [rawArr cStringUsingEncoding:NSASCIIStringEncoding];
+    short res = 0;
+    for (long i = 0; i < length;) {
+        if (res >= 8) {
+            [self writeByte:f_out andArr:[restStr cStringUsingEncoding:NSASCIIStringEncoding]];
+            restStr = [restStr substringFromIndex:8].mutableCopy;
+            res -= 8;
+        }
+        else {
+            str = [_mutDict objectForKey:[NSString stringWithFormat:@"%c", arr[i++]]];
+            
+            res += str.length;
+            [restStr appendString:str];
+            
+            if (res >= 8) {
+                [self writeByte:f_out andArr:[restStr cStringUsingEncoding:NSASCIIStringEncoding]];
+                restStr = [restStr substringFromIndex:8].mutableCopy;
+                res -= 8;
+            }
+        }
+    }
+    if (res > 0) {
+        for (int i = 0; i < 8 - res; i++)
+            [restStr appendFormat:@"%c", HFMLEFTPATH];
+        [self writeByte:f_out andArr:[restStr cStringUsingEncoding:NSASCIIStringEncoding]];
+    }
+    f_out.close();
+    if (res)
+        return 8 - res;
+    return 0;
+}
+
+- (void)readByte:(char &)ch toStr:(string &)str {
+    
+    char c[8];
+    for (int i = 7; i >= 0; i--) {
+        if (ch % 2) c[i] = '1';
+        else c[i] = '0';
+        ch >>= 1;
+    }
+    int len = int(str.length());
+    char *temp = new char[len + 9];
+    const char * t = str.c_str();
+    for (int i = 0; i < len; i++)
+        temp[i] = t[i];
+    for (int i = 0; i < 8; i++)
+        temp[i + len] = c[i];
+    temp[len + 8] = '\0';
+    str = string(temp);
+    delete[] temp;
+}
+
+- (NSString *)readBinaryFrom:(NSString *)path andL:(long &)length {
+    if (!path)
+        return 0;
+    ifstream input([path cStringUsingEncoding:NSASCIIStringEncoding], ios::binary | ios::in);
+    if (!input.is_open()) {
+        [self presentAlertWithMsg:@"Wrong"];
+        return 0;
+    }
+    length = 0;
+    char c[1];
+    string str;
+    while (input.read(c, 1)) {
+        [self readByte:c[0] toStr:str];
+        length += 8;
+    }
+    length -= _rest;
+    return [NSString stringWithCString:str.c_str() encoding:NSASCIIStringEncoding];
+    
+}
+
+
+
 - (IBAction)unzip:(id)sender {
+    __weak typeof(self) weakSelf = self;
+    [self selectPathIsDirAllowed:0 multiSelect:0 successHandler:^(NSArray *arr) {
+        NSString *path = [arr.firstObject path];
+        long length = -1;
+        NSString * result = [self readBinaryFrom:path andL:length];
+        if (length == -1) return;
+        if (!length) {
+            [self presentAlertWithMsg:@"Nothing Read"];
+            return;
+        }
+        
+        NSMutableDictionary *reversedDict = [[NSMutableDictionary alloc] initWithCapacity:weakSelf.mutDict.count];
+        [weakSelf.mutDict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+            [reversedDict setObject:key forKey:obj];
+        }];
+ 
+        NSString * c;
+        NSMutableString * text = [[NSMutableString alloc] init];
+        NSMutableString * temp = [[NSMutableString alloc] init];
+ 
+        const char * arr1 = [result cStringUsingEncoding:NSASCIIStringEncoding];
+        for (long i = 0; i < length; i++) {
+           
+            [temp appendFormat:@"%c", arr1[i]];
+            c = [reversedDict objectForKey:temp];
+            if (c) {
+                [text appendString:c];
+                temp = [[NSMutableString alloc] init];
+            }
+          
+        }
+        ///NOW WE GOT THE FINAL STRING!!!:text
+        NSSavePanel *savePanel = [NSSavePanel savePanel];
+        [savePanel setNameFieldStringValue:@"decoded"];
+        [savePanel setDirectoryURL:[NSURL fileURLWithPath:@"/Users/eric/desktop"]];
+        
+        [savePanel beginSheetModalForWindow:self.view.window completionHandler:^(NSInteger savedClick) {
+            if (savedClick == 1) {
+                NSString *selectedPath = savePanel.URL.path;
+                NSData *adata = [text dataUsingEncoding:NSASCIIStringEncoding];
+                bool creat2 = [NSFileManager.defaultManager createFileAtPath:selectedPath contents:adata attributes:nil];
+                if (!creat2) {
+                    [self presentAlertWithMsg:@"创建文件时失败，请重试"];
+                    return;
+                }
+                
+            }
+        }];
+    }];
     
 }
 
